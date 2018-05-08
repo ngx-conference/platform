@@ -2,9 +2,39 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "",
-  "projects": {},
+  "projects": {
+    "datamodel": {
+      "root": "libs/datamodel",
+      "sourceRoot": "libs/datamodel/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/datamodel/src/test.ts",
+            "tsConfig": "libs/datamodel/tsconfig.spec.json",
+            "karmaConfig": "libs/datamodel/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/datamodel/tsconfig.lib.json",
+              "libs/datamodel/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "typescriptMismatch": false,
     "defaultCollection": "@nrwl/schematics"
-  }
+  },
+  "defaultProject": "datamodel"
 }

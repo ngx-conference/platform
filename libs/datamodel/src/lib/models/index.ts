@@ -1,0 +1,6 @@
+export * from './day.model'
+export * from './event.model'
+export * from './room.model'
+export * from './speaker.model'
+export * from './sponsor.model'
+export * from './talk.model'

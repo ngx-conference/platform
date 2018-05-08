@@ -18,6 +18,9 @@
     "paths": {
       "@platform/*": [
         "libs/*"
+      ],
+      "@platform/datamodel": [
+        "libs/datamodel/src/index.ts"
       ]
     }
   },
