@@ -4,7 +4,7 @@
     class="sidenav"
     fixedInViewport="true"
     [attr.role]="isHandset ? 'dialog' : 'navigation'"
-    [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
+    [mode]="(isHandset | async)!.matches ? 'push' : 'side'"
     [opened]="!(isHandset | async)!.matches">
     <mat-toolbar color="primary">{{service.menuTitle}}</mat-toolbar>
     <mat-nav-list>

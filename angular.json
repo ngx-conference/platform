@@ -263,6 +263,90 @@
           }
         }
       }
+    },
+    "admin-speakers": {
+      "root": "libs/admin-speakers",
+      "sourceRoot": "libs/admin-speakers/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/admin-speakers/src/test.ts",
+            "tsConfig": "libs/admin-speakers/tsconfig.spec.json",
+            "karmaConfig": "libs/admin-speakers/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/admin-speakers/tsconfig.lib.json",
+              "libs/admin-speakers/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "admin-sponsors": {
+      "root": "libs/admin-sponsors",
+      "sourceRoot": "libs/admin-sponsors/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/admin-sponsors/src/test.ts",
+            "tsConfig": "libs/admin-sponsors/tsconfig.spec.json",
+            "karmaConfig": "libs/admin-sponsors/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/admin-sponsors/tsconfig.lib.json",
+              "libs/admin-sponsors/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "admin-talks": {
+      "root": "libs/admin-talks",
+      "sourceRoot": "libs/admin-talks/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/admin-talks/src/test.ts",
+            "tsConfig": "libs/admin-talks/tsconfig.spec.json",
+            "karmaConfig": "libs/admin-talks/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/admin-talks/tsconfig.lib.json",
+              "libs/admin-talks/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

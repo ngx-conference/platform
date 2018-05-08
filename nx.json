@@ -21,6 +21,15 @@
     },
     "admin-shared": {
       "tags": []
+    },
+    "admin-speakers": {
+      "tags": []
+    },
+    "admin-sponsors": {
+      "tags": []
+    },
+    "admin-talks": {
+      "tags": []
     }
   }
 }

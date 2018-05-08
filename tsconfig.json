@@ -33,6 +33,15 @@
       ],
       "@ngx-conference/admin-shared": [
         "libs/admin-shared/src/index.ts"
+      ],
+      "@ngx-conference/admin-speakers": [
+        "libs/admin-speakers/src/index.ts"
+      ],
+      "@ngx-conference/admin-sponsors": [
+        "libs/admin-sponsors/src/index.ts"
+      ],
+      "@ngx-conference/admin-talks": [
+        "libs/admin-talks/src/index.ts"
       ]
     }
   },

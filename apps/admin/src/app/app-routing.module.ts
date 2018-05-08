@@ -1,8 +1,6 @@
 import { RouterModule, Routes } from '@angular/router'
 import { LayoutComponent } from '@ngx-conference/admin-ui'
 
-// import { AdminDashboardModule } from '@ngx-conference/admin-dashboard'
-
 const routes: Routes = [
   {
     path: '',
@@ -16,6 +14,18 @@ const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: '@ngx-conference/admin-dashboard#AdminDashboardModule',
+      },
+      {
+        path: 'speakers',
+        loadChildren: '@ngx-conference/admin-speakers#AdminSpeakersModule',
+      },
+      {
+        path: 'sponsors',
+        loadChildren: '@ngx-conference/admin-sponsors#AdminSponsorsModule',
+      },
+      {
+        path: 'talks',
+        loadChildren: '@ngx-conference/admin-talks#AdminTalksModule',
       },
     ],
   },

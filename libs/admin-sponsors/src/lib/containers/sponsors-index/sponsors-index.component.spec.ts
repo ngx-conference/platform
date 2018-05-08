@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { DashboardIndexComponent } from './dashboard-index.component'
+import { SpeakersIndexComponent } from './dashboard-index.component'
 
 describe('TalksIndexComponent', () => {
-  let component: DashboardIndexComponent
-  let fixture: ComponentFixture<DashboardIndexComponent>
+  let component: SpeakersIndexComponent
+  let fixture: ComponentFixture<SpeakersIndexComponent>
 
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        declarations: [DashboardIndexComponent],
+        declarations: [SpeakersIndexComponent],
       }).compileComponents()
     }),
   )
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DashboardIndexComponent)
+    fixture = TestBed.createComponent(SpeakersIndexComponent)
     component = fixture.componentInstance
     fixture.detectChanges()
   })

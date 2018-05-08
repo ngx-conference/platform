@@ -5,7 +5,7 @@ import {
   Breakpoints,
   BreakpointState,
 } from '@angular/cdk/layout'
-import { UiService } from '@ngx-conference/admin-ui/src/lib/services/ui.service'
+import { UiService } from '../../services/ui.service'
 
 @Component({
   selector: 'lib-header',
