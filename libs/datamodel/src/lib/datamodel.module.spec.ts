@@ -1,7 +1,7 @@
-import { DatamodelModule } from './datamodel.module';
+import { DatamodelModule } from './datamodel.module'
 
 describe('DatamodelModule', () => {
   it('should work', () => {
-    expect(new DatamodelModule()).toBeDefined();
-  });
-});
+    expect(new DatamodelModule()).toBeDefined()
+  })
+})

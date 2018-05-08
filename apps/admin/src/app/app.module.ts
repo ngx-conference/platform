@@ -8,8 +8,12 @@ import { AdminSharedModule } from '@ngx-conference/admin-shared'
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, AdminSharedModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    AdminSharedModule,
+  ],
   bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

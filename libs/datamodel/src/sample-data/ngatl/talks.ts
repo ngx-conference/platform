@@ -604,10 +604,6 @@ export const talksDayFour: Talk[] = [
     // speaker: 'Sani Yusuf',
   },
   {
-
-
-
-
     id: '5a5fcee829ae9d3111105535',
     name:
       "It's Not Dark Magic - Pulling Back the Curtains From Your Stylesheets",
@@ -674,10 +670,6 @@ export const talksDayFour: Talk[] = [
     // speaker: 'Simona Cotin',
   },
   {
-
-
-
-
     id: '5a5fcee829ae9d311110553b',
     name:
       'End the Test Engineer role: how cross-functionality leads to a better engineering process',

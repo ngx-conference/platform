@@ -1,4 +1,3 @@
-
 import { Room } from '../../src/models'
 
 import { event } from './event'

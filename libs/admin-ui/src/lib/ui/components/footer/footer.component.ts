@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
 @Component({
   selector: 'lib-footer',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
       footer works!
     </p>
   `,
-  styles: []
+  styles: [],
 })
 export class FooterComponent implements OnInit {
   constructor() {}

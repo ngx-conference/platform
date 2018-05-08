@@ -1,5 +1,5 @@
-import { RouterModule, Routes } from '@angular/router';
-import { LayoutComponent } from '@ngx-conference/admin-ui/src/lib/ui/containers/layout/layout.component';
+import { RouterModule, Routes } from '@angular/router'
+import { LayoutComponent } from '@ngx-conference/admin-ui/src/lib/ui/containers/layout/layout.component'
 
 // import { AdminDashboardModule } from '@ngx-conference/admin-dashboard'
 
@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'dashboard'
+    redirectTo: 'dashboard',
   },
   {
     path: '',
@@ -15,9 +15,9 @@ const routes: Routes = [
     children: [
       {
         path: 'dashboard',
-        loadChildren: '@ngx-conference/admin-dashboard#AdminDashboardModule'
-      }
-    ]
-  }
-];
-export const AppRoutingModule = RouterModule.forRoot(routes);
+        loadChildren: '@ngx-conference/admin-dashboard#AdminDashboardModule',
+      },
+    ],
+  },
+]
+export const AppRoutingModule = RouterModule.forRoot(routes)

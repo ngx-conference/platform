@@ -17,7 +17,7 @@ export const speakers: Speaker[] = [
     avatarUrl:
       'https://daks2k3a4ib2z.cloudfront.net/59f85d8ca38c420001ebea6f/59fc66d822019c0001c195cd_Alyssa.jpg',
     description:
-      'I\'m an Angular Developer Advocate for Kendo UI & GDE. I’ve spoken at over 20 conferences Internationally, specializing in motivational soft talks. I\'m a weekly panelist on Adventures in Angular and Angular Air, which have a combined following of over 16,000 listeners. I enjoy gaming, scuba diving, and have a toothless dog named Gummy. My DM is always open, come talk sometime.',
+      "I'm an Angular Developer Advocate for Kendo UI & GDE. I’ve spoken at over 20 conferences Internationally, specializing in motivational soft talks. I'm a weekly panelist on Adventures in Angular and Angular Air, which have a combined following of over 16,000 listeners. I enjoy gaming, scuba diving, and have a toothless dog named Gummy. My DM is always open, come talk sometime.",
     twitter: 'https://twitter.com/AlyssaNicoll',
   },
   {
@@ -46,7 +46,7 @@ export const speakers: Speaker[] = [
     avatarUrl:
       'https://daks2k3a4ib2z.cloudfront.net/59f85d8ca38c420001ebea6f/59fc6758b6086d00014932ca_Brad.jpg',
     description:
-      'Brad Green is an Engineering Director at Google where he manages that Angular Framework, Google\'s internal CRM suite, and other internal development productivity tools. He lives in Mountain View, CA with two kids and four chickens',
+      "Brad Green is an Engineering Director at Google where he manages that Angular Framework, Google's internal CRM suite, and other internal development productivity tools. He lives in Mountain View, CA with two kids and four chickens",
     twitter: 'https://twitter.com/bradlygreen',
   },
   {
@@ -65,7 +65,7 @@ export const speakers: Speaker[] = [
     avatarUrl:
       'https://daks2k3a4ib2z.cloudfront.net/59f85d8ca38c420001ebea6f/59fc6b22cba6e2000196761e_Carmen.jpg',
     description:
-      'Carmen is a front-end engineer who likes writing code and solving challenging puzzles. She\'s currently working towards undertaking the path of Artificial Neural Networks and Machine Learning ... all one step at a time. If she had superpowers, she would smiley all the things.',
+      "Carmen is a front-end engineer who likes writing code and solving challenging puzzles. She's currently working towards undertaking the path of Artificial Neural Networks and Machine Learning ... all one step at a time. If she had superpowers, she would smiley all the things.",
     twitter: 'https://twitter.com/CarmenPopoviciu',
   },
   {
@@ -75,7 +75,7 @@ export const speakers: Speaker[] = [
     avatarUrl:
       'https://daks2k3a4ib2z.cloudfront.net/59f85d8ca38c420001ebea6f/59fc6b47b6086d000149332e_Chaela.jpg',
     description:
-      'Chaela is a native to Georgia. She attended Kennesaw State University and earned a bachelor\'s in computer science. Chaela has a love for JavaScript and currently works as a software engineer for Careerbuilder.',
+      "Chaela is a native to Georgia. She attended Kennesaw State University and earned a bachelor's in computer science. Chaela has a love for JavaScript and currently works as a software engineer for Careerbuilder.",
     twitter: 'https://twitter.com/chawomack',
   },
   {
@@ -174,7 +174,7 @@ export const speakers: Speaker[] = [
     avatarUrl:
       'https://daks2k3a4ib2z.cloudfront.net/59f85d8ca38c420001ebea6f/5a5f699d7ec7470001130ab0_Kamini%20Headshot.PNG',
     description:
-      'Kamini is a Senior Director of Engineering at LinkedIn. She leads the Infrastructure and Productivity Engineering Team for the core flagship app for LinkedIn. Her team is responsible for developing tools and infrastructure to enable continuous development and deployment. She also leads the Women in Tech (WIT) Invest Program at LinkedIn which provides opportunities to accelerate women\'s careers. Prior to LinkedIn, Kamini spent 11 years at eBay, rising through the company from an engineer to leading and managing large engineering organizations. Throughout her career, Kamini has transformed Engineering, Tools, and Test organizations at several companies.',
+      "Kamini is a Senior Director of Engineering at LinkedIn. She leads the Infrastructure and Productivity Engineering Team for the core flagship app for LinkedIn. Her team is responsible for developing tools and infrastructure to enable continuous development and deployment. She also leads the Women in Tech (WIT) Invest Program at LinkedIn which provides opportunities to accelerate women's careers. Prior to LinkedIn, Kamini spent 11 years at eBay, rising through the company from an engineer to leading and managing large engineering organizations. Throughout her career, Kamini has transformed Engineering, Tools, and Test organizations at several companies.",
   },
   {
     id: 'kapunahele-wong',
@@ -268,7 +268,7 @@ export const speakers: Speaker[] = [
     avatarUrl:
       'https://daks2k3a4ib2z.cloudfront.net/59f85d8ca38c420001ebea6f/59fc74b6605d4b0001f0023d_Ryan.jpeg',
     description:
-      'Ryan is a full-stack JavaScript developer and works mostly with Angular and Node. He\'s a Google Developer Expert, Developer Advocate at Auth0, and also runs Angularcasts.io, a screencast site offering end-to-end Angular and JavaScript training. Ryan is the author of Securing Angular Applications, a complete guide on how to lock down Angular apps.',
+      "Ryan is a full-stack JavaScript developer and works mostly with Angular and Node. He's a Google Developer Expert, Developer Advocate at Auth0, and also runs Angularcasts.io, a screencast site offering end-to-end Angular and JavaScript training. Ryan is the author of Securing Angular Applications, a complete guide on how to lock down Angular apps.",
     twitter: 'https://twitter.com/ryanchenkie',
   },
   {
@@ -297,7 +297,7 @@ export const speakers: Speaker[] = [
     avatarUrl:
       'https://daks2k3a4ib2z.cloudfront.net/59f85d8ca38c420001ebea6f/59fc7949b6086d00014935d6_Scott.jpg',
     description:
-      'Scott is a web developer who has been blogging at https://hanselman.com for over a decade. He works in Open Source on ASP.NET and the Azure Cloud for Microsoft out of his home office in Portland, Oregon. Scott has three podcasts, http://hanselminutes.com for tech talk, http://thisdeveloperslife.com on developers\' lives and loves, and http://ratchetandthegeek.com for pop culture and tech media. He\'s written a number of books and spoken in person to almost a half million developers worldwide.',
+      "Scott is a web developer who has been blogging at https://hanselman.com for over a decade. He works in Open Source on ASP.NET and the Azure Cloud for Microsoft out of his home office in Portland, Oregon. Scott has three podcasts, http://hanselminutes.com for tech talk, http://thisdeveloperslife.com on developers' lives and loves, and http://ratchetandthegeek.com for pop culture and tech media. He's written a number of books and spoken in person to almost a half million developers worldwide.",
     twitter: 'https://twitter.com/shanselman',
   },
   {
@@ -327,7 +327,7 @@ export const speakers: Speaker[] = [
     avatarUrl:
       'https://daks2k3a4ib2z.cloudfront.net/59f85d8ca38c420001ebea6f/5a32cdf19a5de90001dc71d0_Stefanie%20Diaz%20Headshot.jpg',
     description:
-      'Stefanie has spent the last two and a half years sharing her insights as well as compelling stories of Atlanta entrepreneurs as Host of the Mastermind Your Launch Podcast which generated over 130,000 unique listeners per episode and created more than 100 shows. In 2017, Stefanie founded WoE, Women Only Entrepreneurs; an event-based community for Atlanta lady bosses that can best be described as Ellen meets Oprah for women entrepreneurs. W.O.E. combines the lively spirit of a girls\' night out with the soulful impact of inspiring interviews plus uplifting affirmations for an experience like no other. Recently named an Atlanta Startup Wonder Women by Hypepotamus, Stefanie’s impact on the Atlanta entrepreneurial community goes beyond WoE and the brand strategy work she does with her clients. She is a Community Organizer for 1 Million Cups Atlanta and a 2-time mentor at Techsquare Labs’ Atlanta Startup Battle.',
+      "Stefanie has spent the last two and a half years sharing her insights as well as compelling stories of Atlanta entrepreneurs as Host of the Mastermind Your Launch Podcast which generated over 130,000 unique listeners per episode and created more than 100 shows. In 2017, Stefanie founded WoE, Women Only Entrepreneurs; an event-based community for Atlanta lady bosses that can best be described as Ellen meets Oprah for women entrepreneurs. W.O.E. combines the lively spirit of a girls' night out with the soulful impact of inspiring interviews plus uplifting affirmations for an experience like no other. Recently named an Atlanta Startup Wonder Women by Hypepotamus, Stefanie’s impact on the Atlanta entrepreneurial community goes beyond WoE and the brand strategy work she does with her clients. She is a Community Organizer for 1 Million Cups Atlanta and a 2-time mentor at Techsquare Labs’ Atlanta Startup Battle.",
     twitter: 'https://twitter.com/thestefaniediaz',
   },
   {

@@ -1,4 +1,4 @@
 /*
        * Public API Surface of mylib
        */
-export * from './lib/admin-ui.module';
+export * from './lib/admin-ui.module'

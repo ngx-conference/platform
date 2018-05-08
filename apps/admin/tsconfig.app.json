@@ -5,6 +5,10 @@
     "module": "es2015",
     "types": []
   },
+  "include": [
+    "./src/**/*.ts",
+    "../../libs/admin-dashboard/src/lib/admin-dashboard.module.ts"
+  ],
   "exclude": [
     "src/test.ts",
     "**/*.spec.ts"

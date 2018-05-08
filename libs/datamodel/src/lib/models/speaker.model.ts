@@ -1,4 +1,4 @@
-import { BaseModel } from './base.model';
+import { BaseModel } from './base.model'
 import { Talk } from './talk.model'
 
 export class Speaker extends BaseModel {

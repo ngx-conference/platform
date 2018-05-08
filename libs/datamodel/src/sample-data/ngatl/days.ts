@@ -8,26 +8,26 @@ export const dayOne: Day = {
   name: 'Workshops day 2',
   date: new Date('2018-01-30'),
   event,
-  talks: talksDayOne
+  talks: talksDayOne,
 }
 export const dayTwo: Day = {
   id: 'ngatl-day-id-2',
   name: 'Workshops day 2',
   date: new Date('2018-01-31'),
   event,
-  talks: talksDayTwo
+  talks: talksDayTwo,
 }
 export const dayThree: Day = {
   id: 'ngatl-day-id-3',
   name: 'Conference day 1',
   date: new Date('2018-02-01'),
   event,
-  talks: talksDayThree
+  talks: talksDayThree,
 }
 export const dayFour: Day = {
   id: 'ngatl-day-id-4',
   name: 'Conference day 2',
   date: new Date('2018-02-02'),
   event,
-  talks: talksDayFour
+  talks: talksDayFour,
 }

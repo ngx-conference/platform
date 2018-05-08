@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
 @Component({
   selector: 'lib-header',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
       header works!
     </p>
   `,
-  styles: []
+  styles: [],
 })
 export class HeaderComponent implements OnInit {
   constructor() {}
