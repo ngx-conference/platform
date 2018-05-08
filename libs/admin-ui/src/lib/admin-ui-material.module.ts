@@ -4,7 +4,10 @@ import {
   MatCardModule,
   MatGridListModule,
   MatIconModule,
+  MatListModule,
   MatMenuModule,
+  MatSidenavModule,
+  MatToolbarModule,
 } from '@angular/material'
 import { LayoutModule } from '@angular/cdk/layout'
 
@@ -13,7 +16,10 @@ const materialModules = [
   MatCardModule,
   MatGridListModule,
   MatIconModule,
+  MatListModule,
   MatMenuModule,
+  MatSidenavModule,
+  MatToolbarModule,
   LayoutModule,
 ]
 

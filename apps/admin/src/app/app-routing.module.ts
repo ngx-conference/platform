@@ -1,5 +1,5 @@
 import { RouterModule, Routes } from '@angular/router'
-import { LayoutComponent } from '@ngx-conference/admin-ui/src/lib/ui/containers/layout/layout.component'
+import { LayoutComponent } from '@ngx-conference/admin-ui'
 
 // import { AdminDashboardModule } from '@ngx-conference/admin-dashboard'
 
