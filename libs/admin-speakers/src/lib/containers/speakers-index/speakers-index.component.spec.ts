@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { SpeakersIndexComponent } from './dashboard-index.component'
+import { SpeakersIndexComponent } from './speakers-index.component'
 
 describe('TalksIndexComponent', () => {
   let component: SpeakersIndexComponent

@@ -1,0 +1,31 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="isHandset ? 'dialog' : 'navigation'"
+    [mode]="(isHandset | async)!.matches ? 'push' : 'side'"
+    [opened]="!(isHandset | async)!.matches">
+    <mat-toolbar color="primary">{{service.menuTitle}}</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item
+         *ngFor="let item of service.menuItems"
+         [routerLink]="item.link"
+         routerLinkActive="active">
+        <mat-icon style="margin-right: 10px;">{{item.icon}}</mat-icon>
+        {{item.label}}
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <lib-header [isHandset]="isHandset"
+                [appTitle]="service.appTitle"
+                (action)="handleAction($event)">
+    </lib-header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<lib-footer></lib-footer>

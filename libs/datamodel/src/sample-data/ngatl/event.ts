@@ -1,4 +1,4 @@
-import { Event } from '../../src/models'
+import { Event } from '../../lib/models'
 
 import { dayOne, dayTwo, dayThree, dayFour } from './days'
 import { speakers } from './speakers'

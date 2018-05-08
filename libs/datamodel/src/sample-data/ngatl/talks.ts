@@ -1,4 +1,4 @@
-import { Talk } from '../../src/models'
+import { Talk } from '../../lib/models'
 
 import { roomOne } from './rooms'
 import { dayOne, dayTwo, dayThree, dayFour } from './days'

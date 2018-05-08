@@ -1,4 +1,4 @@
-import { Room } from '../../src/models'
+import { Room } from '../../lib/models'
 
 import { event } from './event'
 

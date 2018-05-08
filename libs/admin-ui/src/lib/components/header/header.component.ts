@@ -1,23 +1,14 @@
-import { Component } from '@angular/core'
+import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { Observable } from 'rxjs/index'
-import {
-  BreakpointObserver,
-  Breakpoints,
-  BreakpointState,
-} from '@angular/cdk/layout'
-import { UiService } from '../../services/ui.service'
+import { BreakpointState } from '@angular/cdk/layout'
 
 @Component({
   selector: 'lib-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  isHandset: Observable<BreakpointState> = this.breakpointObserver.observe(
-    Breakpoints.Handset,
-  )
-  constructor(
-    private breakpointObserver: BreakpointObserver,
-    private service: UiService,
-  ) {}
+  @Input() appTitle: string
+  @Input() isHandset: Observable<BreakpointState>
+  @Output() action = new EventEmitter()
 }

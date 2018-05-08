@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core'
 import {
   MatButtonModule,
   MatCardModule,
+  MatCheckboxModule,
   MatGridListModule,
   MatIconModule,
   MatListModule,
@@ -14,6 +15,7 @@ import { LayoutModule } from '@angular/cdk/layout'
 const materialModules = [
   MatButtonModule,
   MatCardModule,
+  MatCheckboxModule,
   MatGridListModule,
   MatIconModule,
   MatListModule,

@@ -1,4 +1,4 @@
-import { Sponsor } from '../../src/models'
+import { Sponsor } from '../../lib/models'
 
 export const sponsors: Sponsor[] = [
   {

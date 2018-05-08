@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'lib-footer',
   template: `
-    <p>
-      footer works!
-    </p>
+    <mat-toolbar color="secondary"> MIT License &copy; 2018</mat-toolbar>
   `,
-  styles: [],
+  styles: [`
+    mat-toolbar {
+      justify-content: center;
+      color: #8f8f8f;
+    }
+  `],
 })
-export class FooterComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
+export class FooterComponent {
 }

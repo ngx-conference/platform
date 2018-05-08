@@ -1,4 +1,4 @@
-import { Speaker } from '../../src/models'
+import { Speaker } from '../../lib/models'
 
 export const speakers: Speaker[] = [
   {

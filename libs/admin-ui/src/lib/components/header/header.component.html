@@ -1,30 +1,11 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav
-    #drawer
-    class="sidenav"
-    fixedInViewport="true"
-    [attr.role]="isHandset ? 'dialog' : 'navigation'"
-    [mode]="(isHandset | async)!.matches ? 'push' : 'side'"
-    [opened]="!(isHandset | async)!.matches">
-    <mat-toolbar color="primary">{{service.menuTitle}}</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item [routerLink]="item.link" *ngFor="let item of service.menuItems" routerLinkActive="active">
-        <mat-icon style="margin-right: 10px;">{{item.icon}}</mat-icon>
-        {{item.label}}
-      </a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="(isHandset | async)!.matches">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>{{service.appTitle}}</span>
-    </mat-toolbar>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<mat-toolbar color="primary">
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="action.emit({ type: 'TOGGLE_DRAWER' })"
+    *ngIf="(isHandset | async)!.matches">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <span>{{appTitle}}</span>
+</mat-toolbar>

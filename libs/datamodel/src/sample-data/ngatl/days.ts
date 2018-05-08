@@ -1,4 +1,4 @@
-import { Day } from '../../src/models'
+import { Day } from '../../lib/models'
 
 import { talksDayFour, talksDayOne, talksDayThree, talksDayTwo } from './talks'
 import { event } from './event'
