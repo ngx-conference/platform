@@ -16,11 +16,23 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@platform/*": [
+      "@ngx-conference/*": [
         "libs/*"
       ],
-      "@platform/datamodel": [
+      "@ngx-conference/datamodel": [
         "libs/datamodel/src/index.ts"
+      ],
+      "@ngx-conference/admin-api": [
+        "libs/admin-api/src/index.ts"
+      ],
+      "@ngx-conference/admin-ui": [
+        "libs/admin-ui/src/index.ts"
+      ],
+      "@ngx-conference/admin-dashboard": [
+        "libs/admin-dashboard/src/index.ts"
+      ],
+      "@ngx-conference/admin-shared": [
+        "libs/admin-shared/src/index.ts"
       ]
     }
   },

@@ -1,7 +1,25 @@
 {
-  "npmScope": "platform",
+  "npmScope": "ngx-conference",
   "projects": {
     "datamodel": {
+      "tags": []
+    },
+    "admin": {
+      "tags": []
+    },
+    "admin-e2e": {
+      "tags": []
+    },
+    "admin-api": {
+      "tags": []
+    },
+    "admin-ui": {
+      "tags": []
+    },
+    "admin-dashboard": {
+      "tags": []
+    },
+    "admin-shared": {
       "tags": []
     }
   }
