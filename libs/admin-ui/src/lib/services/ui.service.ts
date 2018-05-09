@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
+import { Observable } from 'rxjs'
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UiService {
   public appTitle = 'NGX Conference Admin'
@@ -28,5 +29,5 @@ export class UiService {
       icon: 'present_to_all',
     },
   ]
-  constructor() { }
+  public user$: Observable<any>
 }

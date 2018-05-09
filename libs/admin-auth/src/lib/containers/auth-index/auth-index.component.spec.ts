@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { FooterComponent } from './footer.component'
+import { AuthIndexComponent } from './auth-index.component'
 
-describe('PageTitleComponent', () => {
-  let component: FooterComponent
-  let fixture: ComponentFixture<FooterComponent>
+describe('AuthIndexComponent', () => {
+  let component: AuthIndexComponent
+  let fixture: ComponentFixture<AuthIndexComponent>
 
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        declarations: [FooterComponent],
+        declarations: [AuthIndexComponent],
       }).compileComponents()
-    }),
+    })
   )
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FooterComponent)
+    fixture = TestBed.createComponent(AuthIndexComponent)
     component = fixture.componentInstance
     fixture.detectChanges()
   })

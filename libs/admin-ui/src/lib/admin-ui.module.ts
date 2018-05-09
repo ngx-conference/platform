@@ -7,11 +7,17 @@ import { AdminUiMaterialModule } from './admin-ui-material.module'
 
 import { LayoutComponent } from './containers/layout/layout.component'
 
+import { AvatarComponent } from './components/avatar/avatar.component'
 import { FooterComponent } from './components/footer/footer.component'
 import { HeaderComponent } from './components/header/header.component'
+import { PageComponent } from './components/page/page.component'
+import { PageTitleComponent } from './components/page-title/page-title.component'
 
 const exportedComponents = [
-  LayoutComponent
+  AvatarComponent,
+  LayoutComponent,
+  PageComponent,
+  PageTitleComponent,
 ]
 
 const internalComponents = [

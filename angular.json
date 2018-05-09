@@ -156,7 +156,7 @@
       "root": "libs/admin-api",
       "sourceRoot": "libs/admin-api/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "api",
       "architect": {
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -184,7 +184,7 @@
       "root": "libs/admin-ui",
       "sourceRoot": "libs/admin-ui/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "ui",
       "architect": {
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -212,7 +212,7 @@
       "root": "libs/admin-dashboard",
       "sourceRoot": "libs/admin-dashboard/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "dashboard",
       "architect": {
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -240,7 +240,7 @@
       "root": "libs/admin-shared",
       "sourceRoot": "libs/admin-shared/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "shared",
       "architect": {
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -268,7 +268,7 @@
       "root": "libs/admin-speakers",
       "sourceRoot": "libs/admin-speakers/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "speakers",
       "architect": {
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -296,7 +296,7 @@
       "root": "libs/admin-sponsors",
       "sourceRoot": "libs/admin-sponsors/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "sponsors",
       "architect": {
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -324,7 +324,7 @@
       "root": "libs/admin-talks",
       "sourceRoot": "libs/admin-talks/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "talks",
       "architect": {
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -340,6 +340,34 @@
             "tsConfig": [
               "libs/admin-talks/tsconfig.lib.json",
               "libs/admin-talks/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "admin-auth": {
+      "root": "libs/admin-auth",
+      "sourceRoot": "libs/admin-auth/src",
+      "projectType": "library",
+      "prefix": "auth",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/admin-auth/src/test.ts",
+            "tsConfig": "libs/admin-auth/tsconfig.spec.json",
+            "karmaConfig": "libs/admin-auth/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/admin-auth/tsconfig.lib.json",
+              "libs/admin-auth/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

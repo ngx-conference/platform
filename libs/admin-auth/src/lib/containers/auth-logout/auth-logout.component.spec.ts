@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { FooterComponent } from './footer.component'
+import { AuthLogoutComponent } from './auth-logout.component'
 
-describe('PageTitleComponent', () => {
-  let component: FooterComponent
-  let fixture: ComponentFixture<FooterComponent>
+describe('AuthLogoutComponent', () => {
+  let component: AuthLogoutComponent
+  let fixture: ComponentFixture<AuthLogoutComponent>
 
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        declarations: [FooterComponent],
+        declarations: [AuthLogoutComponent],
       }).compileComponents()
-    }),
+    })
   )
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FooterComponent)
+    fixture = TestBed.createComponent(AuthLogoutComponent)
     component = fixture.componentInstance
     fixture.detectChanges()
   })

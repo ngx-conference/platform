@@ -30,6 +30,9 @@
     },
     "admin-talks": {
       "tags": []
+    },
+    "admin-auth": {
+      "tags": []
     }
   }
 }

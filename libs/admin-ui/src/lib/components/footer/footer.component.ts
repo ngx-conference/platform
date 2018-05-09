@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
 
 @Component({
-  selector: 'lib-footer',
+  selector: 'ui-footer',
   template: `
     <mat-toolbar color="secondary"> MIT License &copy; 2018</mat-toolbar>
   `,

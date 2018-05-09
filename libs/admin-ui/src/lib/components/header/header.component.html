@@ -8,4 +8,14 @@
     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
   </button>
   <span>{{appTitle}}</span>
+  <div>
+    <button
+      type="button"
+      aria-label="Toggle sidenav"
+      mat-icon-button
+      (click)="action.emit({ type: 'LOGOUT' })">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <ui-avatar *ngIf="user" [image]="user.avatar"></ui-avatar>
+  </div>
 </mat-toolbar>

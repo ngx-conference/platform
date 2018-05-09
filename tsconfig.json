@@ -42,6 +42,9 @@
       ],
       "@ngx-conference/admin-talks": [
         "libs/admin-talks/src/index.ts"
+      ],
+      "@ngx-conference/admin-auth": [
+        "libs/admin-auth/src/index.ts"
       ]
     }
   },
