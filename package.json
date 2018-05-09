@@ -5,8 +5,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
+    "build": "npm run build:admin",
+    "test": "npm run test:admin",
     "dev:admin": "ng serve admin",
     "build:admin": "ng build admin",
     "test:admin": "ng test admin",
