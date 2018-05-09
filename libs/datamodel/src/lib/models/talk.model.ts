@@ -5,7 +5,7 @@ import { Speaker } from './speaker.model'
 import { Sponsor } from './sponsor.model'
 
 export class Talk extends BaseModel {
-  name: string
+  title: string
   type: string // Free field to define type: presentation/workshop/sponsor talk
   day: Day // belongsTo Day
   start: number // 1400

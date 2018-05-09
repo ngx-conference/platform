@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>{{data.id ? 'Edit' : 'Add' }} Talk</h1>
+<div mat-dialog-content>
+  <ui-form [form]="form" [fields]="fields" [model]="data"></ui-form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="accent" [disabled]="!form.dirty || !form.valid" (click)="save(data)">
+    Save
+  </button>
+  <button mat-raised-button color="secondary" mat-dialog-close>
+    Back
+  </button>
+</div>

@@ -9,13 +9,18 @@
   right: 15px;
   bottom: 15px;
 }
-
 .more-button {
   position: absolute;
   top: 5px;
   right: 10px;
 }
-
-.dashboard-card-content {
-  text-align: center;
+.action-button {
+  position: absolute;
+  right: 30px;
+  top: 100px;
+}
+.edit-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }

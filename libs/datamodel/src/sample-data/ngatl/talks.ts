@@ -6,7 +6,7 @@ import { dayOne, dayTwo, dayThree, dayFour } from './days'
 export const talksDayOne: Talk[] = [
   {
     id: 'z7mnehtjrmy',
-    name: 'NativeScript Workshop: Day 1 of 2',
+    title: 'NativeScript Workshop: Day 1 of 2',
     day: dayOne,
     start: 930,
     end: 1600,
@@ -16,7 +16,7 @@ export const talksDayOne: Talk[] = [
   },
   {
     id: 'z7mnehtjrmys',
-    name: 'NativeScript Workshop. Day 2 of 2 ',
+    title: 'NativeScript Workshop. Day 2 of 2 ',
     day: dayOne,
     start: 930,
     end: 1600,
@@ -26,7 +26,7 @@ export const talksDayOne: Talk[] = [
   },
   {
     id: '1l80dbyadkw',
-    name: 'Node.js Fundamentals Workshop: 1 day',
+    title: 'Node.js Fundamentals Workshop: 1 day',
     type: 'Workshop',
     day: dayOne,
     start: 930,
@@ -36,7 +36,7 @@ export const talksDayOne: Talk[] = [
   },
   {
     id: 'ac8dmtqob-m',
-    name: 'Ultimate Testing: Code You Can Trust Workshop: 1 day',
+    title: 'Ultimate Testing: Code You Can Trust Workshop: 1 day',
     type: 'Workshop',
     day: dayOne,
     start: 930,
@@ -46,7 +46,7 @@ export const talksDayOne: Talk[] = [
   },
   {
     id: 'fwggy2dtc-8',
-    name:
+    title:
       'Level up your Node.js application with Nest: Angular sugar on the server Workshop: 1 day',
     type: 'Workshop',
     day: dayOne,
@@ -57,7 +57,7 @@ export const talksDayOne: Talk[] = [
   },
   {
     id: 'n-8gaqhv794',
-    name: 'Production Ready Angular: 1 day',
+    title: 'Production Ready Angular: 1 day',
     type: 'Workshop',
     day: dayOne,
     start: 930,
@@ -67,7 +67,7 @@ export const talksDayOne: Talk[] = [
   },
   {
     id: 'oe6tlzrkr-a',
-    name: 'NativeScript for Angular Best Practices: 1 day',
+    title: 'NativeScript for Angular Best Practices: 1 day',
     type: 'Workshop',
     day: dayOne,
     start: 930,
@@ -80,7 +80,7 @@ export const talksDayOne: Talk[] = [
 export const talksDayTwo: Talk[] = [
   {
     id: '9xlx-rbdtx4',
-    name: 'Taming Forms in Angular: 1 day',
+    title: 'Taming Forms in Angular: 1 day',
     day: dayTwo,
     start: 930,
     end: 1600,
@@ -90,7 +90,7 @@ export const talksDayTwo: Talk[] = [
   },
   {
     id: 'a1fgyyhemss',
-    name: 'Getting started with Universal Workshop: 1 day',
+    title: 'Getting started with Universal Workshop: 1 day',
     day: dayTwo,
     start: 930,
     end: 1600,
@@ -100,7 +100,7 @@ export const talksDayTwo: Talk[] = [
   },
   {
     id: 'app2y7w0mry',
-    name:
+    title:
       'Angular Workshop - RxJS/Observables, Http, Routing, Guards, Lazy Loading, Deploying: 1 day',
     day: dayTwo,
     start: 930,
@@ -111,7 +111,7 @@ export const talksDayTwo: Talk[] = [
   },
   {
     id: 'dxtr2kks1bm',
-    name: 'Angular Fundamentals - Hands On: 1 day',
+    title: 'Angular Fundamentals - Hands On: 1 day',
     day: dayTwo,
     start: 930,
     end: 1600,
@@ -121,7 +121,7 @@ export const talksDayTwo: Talk[] = [
   },
   {
     id: 'ep7nx0vlqmc',
-    name: 'Painless Angular Authentication with Auth0 Workshop: 1 day',
+    title: 'Painless Angular Authentication with Auth0 Workshop: 1 day',
     day: dayTwo,
     start: 930,
     end: 1600,
@@ -134,7 +134,7 @@ export const talksDayTwo: Talk[] = [
 export const talksDayThree: Talk[] = [
   {
     id: '5a5fcee829ae9d311110550a',
-    name: 'Registration + Breakfast',
+    title: 'Registration + Breakfast',
     day: dayThree,
     start: 630,
     end: 800,
@@ -143,7 +143,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110550b',
-    name: 'Zack Chapple, Stefanie Diaz + Maybe someone else',
+    title: 'Zack Chapple, Stefanie Diaz + Maybe someone else',
     day: dayThree,
     start: 800,
     end: 809,
@@ -154,7 +154,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110550c',
-    name: 'Angular as strategy for collaboration and scale',
+    title: 'Angular as strategy for collaboration and scale',
     day: dayThree,
     start: 813,
     end: 843,
@@ -165,7 +165,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110550d',
-    name: 'Modern Testing Strategies for Reactive Applications',
+    title: 'Modern Testing Strategies for Reactive Applications',
     day: dayThree,
     start: 847,
     end: 907,
@@ -175,7 +175,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110550e',
-    name: 'Contributing to the Angular Docs',
+    title: 'Contributing to the Angular Docs',
     day: dayThree,
     start: 911,
     end: 931,
@@ -186,7 +186,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110550f',
-    name: 'Coffee Break',
+    title: 'Coffee Break',
     day: dayThree,
     start: 931,
     end: 946,
@@ -196,7 +196,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105510',
-    name: 'Emotional Intelligence for Engineers',
+    title: 'Emotional Intelligence for Engineers',
     day: dayThree,
     start: 946,
     end: 1006,
@@ -207,7 +207,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105511',
-    name: 'Reactive Brain Waves',
+    title: 'Reactive Brain Waves',
     day: dayThree,
     start: 1010,
     end: 1030,
@@ -218,7 +218,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105512',
-    name: 'Dr. Michio Kaku',
+    title: 'Dr. Michio Kaku',
     day: dayThree,
     start: 1034,
     end: 1134,
@@ -228,7 +228,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105513',
-    name: 'Lunch & Book Signing (30 minutes)',
+    title: 'Lunch & Book Signing (30 minutes)',
     day: dayThree,
     start: 1134,
     end: 1200,
@@ -237,7 +237,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105514',
-    name: 'Post Lunch Remarks',
+    title: 'Post Lunch Remarks',
     day: dayThree,
     start: 1234,
     end: 1200,
@@ -247,7 +247,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105515',
-    name: 'NativeScript and CodeSharing',
+    title: 'NativeScript and CodeSharing',
     day: dayThree,
     start: 1248,
     end: 1308,
@@ -258,7 +258,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105516',
-    name: 'Breaking Down Reactive Forms',
+    title: 'Breaking Down Reactive Forms',
     day: dayThree,
     start: 1312,
     end: 1332,
@@ -269,7 +269,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105517',
-    name: 'JavaScript is the new metal: the cloud vs the browser',
+    title: 'JavaScript is the new metal: the cloud vs the browser',
     day: dayThree,
     start: 1336,
     end: 1406,
@@ -280,7 +280,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105518',
-    name: 'NBA + Angular = Game Detail',
+    title: 'NBA + Angular = Game Detail',
     day: dayThree,
     start: 1410,
     end: 1430,
@@ -291,7 +291,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105519',
-    name: 'Logging, and Errors, and Metrics - Oh My!',
+    title: 'Logging, and Errors, and Metrics - Oh My!',
     day: dayThree,
     start: 1434,
     end: 1454,
@@ -302,7 +302,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110551a',
-    name: 'Coffee Break',
+    title: 'Coffee Break',
     day: dayThree,
     start: 1454,
     end: 1509,
@@ -312,7 +312,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110551b',
-    name: 'Progress',
+    title: 'Progress',
     day: dayThree,
     start: 1509,
     end: 1511,
@@ -322,7 +322,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110551c',
-    name:
+    title:
       'Dissecting the architectural process for creating reusable angular components',
     day: dayThree,
     start: 1515,
@@ -334,7 +334,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110551d',
-    name: 'Webpack - Your New BFF',
+    title: 'Webpack - Your New BFF',
     day: dayThree,
     start: 1539,
     end: 1559,
@@ -345,7 +345,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110551e',
-    name: 'Faster Angular Applications',
+    title: 'Faster Angular Applications',
     day: dayThree,
     start: 1603,
     end: 1623,
@@ -356,7 +356,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110551f',
-    name: 'Beyond the Angular CLI',
+    title: 'Beyond the Angular CLI',
     day: dayThree,
     start: 1627,
     end: 1647,
@@ -366,7 +366,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105520',
-    name: "Angular's User Authentication Tool Belt",
+    title: "Angular's User Authentication Tool Belt",
     day: dayThree,
     start: 1651,
     end: 1711,
@@ -376,7 +376,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105521',
-    name: 'PWA All The Things!',
+    title: 'PWA All The Things!',
     day: dayThree,
     start: 1715,
     end: 1735,
@@ -387,7 +387,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105522',
-    name: 'The parable of the blender',
+    title: 'The parable of the blender',
     day: dayThree,
     start: 1739,
     end: 1759,
@@ -398,7 +398,7 @@ export const talksDayThree: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105523',
-    name: 'Day 1 Closing Remarks',
+    title: 'Day 1 Closing Remarks',
     day: dayThree,
     start: 1803,
     end: 1813,
@@ -409,7 +409,7 @@ export const talksDayThree: Talk[] = [
 
   {
     id: '5a5fcee829ae9d3192805514',
-    name: 'Message from Shai Reznik',
+    title: 'Message from Shai Reznik',
     day: dayThree,
     start: 1242,
     end: 1200,
@@ -422,7 +422,7 @@ export const talksDayThree: Talk[] = [
 export const talksDayFour: Talk[] = [
   {
     id: '5a5fcee829ae9d3111105524',
-    name: 'Breakfast',
+    title: 'Breakfast',
     day: dayFour,
     start: 700,
     end: 800,
@@ -432,7 +432,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105525',
-    name: 'Opening Remarks',
+    title: 'Opening Remarks',
     day: dayFour,
     start: 800,
     end: 810,
@@ -442,7 +442,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105526',
-    name: 'Deploying angular to the cloud',
+    title: 'Deploying angular to the cloud',
     day: dayFour,
     start: 814,
     end: 844,
@@ -453,7 +453,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105527',
-    name: 'Recursive Forms, CVAs & Components',
+    title: 'Recursive Forms, CVAs & Components',
     day: dayFour,
     start: 848,
     end: 908,
@@ -464,7 +464,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105528',
-    name: 'Universal.Power.Women',
+    title: 'Universal.Power.Women',
     day: dayFour,
     start: 912,
     end: 932,
@@ -475,7 +475,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105529',
-    name: 'Coffee Break',
+    title: 'Coffee Break',
     day: dayFour,
     start: 936,
     end: 951,
@@ -485,7 +485,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110552a',
-    name: 'Valor Software',
+    title: 'Valor Software',
     day: dayFour,
     start: 951,
     end: 953,
@@ -496,7 +496,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110552b',
-    name: 'Try not to lose your marbles with RXJS',
+    title: 'Try not to lose your marbles with RXJS',
     day: dayFour,
     start: 957,
     end: 1017,
@@ -507,7 +507,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110552c',
-    name: 'Smart Angular Elements. An Experiment',
+    title: 'Smart Angular Elements. An Experiment',
     day: dayFour,
     start: 1021,
     end: 1041,
@@ -518,7 +518,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110552d',
-    name: 'Building VR Interfaces with Angular',
+    title: 'Building VR Interfaces with Angular',
     day: dayFour,
     start: 1045,
     end: 1105,
@@ -529,7 +529,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110552e',
-    name: '3x3: Fresh Code Delivered, Three Times a Day',
+    title: '3x3: Fresh Code Delivered, Three Times a Day',
     day: dayFour,
     start: 1109,
     end: 1129,
@@ -540,7 +540,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110552f',
-    name: 'Lunch',
+    title: 'Lunch',
     day: dayFour,
     start: 1129,
     end: 1200,
@@ -550,7 +550,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105530',
-    name: 'Post Lunch Remarks',
+    title: 'Post Lunch Remarks',
     day: dayFour,
     start: 1229,
     end: 1200,
@@ -561,7 +561,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105531',
-    name: 'Service Workers & Cows — a love story',
+    title: 'Service Workers & Cows — a love story',
     day: dayFour,
     start: 1243,
     end: 1303,
@@ -572,7 +572,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105532',
-    name: 'The dark side of tuning Angular performance',
+    title: 'The dark side of tuning Angular performance',
     day: dayFour,
     start: 1307,
     end: 1327,
@@ -583,7 +583,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105533',
-    name: 'Machine Learning & Angular Testing w/ Dozn',
+    title: 'Machine Learning & Angular Testing w/ Dozn',
     day: dayFour,
     start: 1331,
     end: 1351,
@@ -594,7 +594,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105534',
-    name: 'Live App Updates Without The App Store',
+    title: 'Live App Updates Without The App Store',
     day: dayFour,
     start: 1355,
     end: 1415,
@@ -605,7 +605,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105535',
-    name:
+    title:
       "It's Not Dark Magic - Pulling Back the Curtains From Your Stylesheets",
     day: dayFour,
     start: 1419,
@@ -617,7 +617,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105536',
-    name: 'Coffee Break',
+    title: 'Coffee Break',
     day: dayFour,
     start: 1439,
     end: 1454,
@@ -627,7 +627,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105537',
-    name: 'Webjunto',
+    title: 'Webjunto',
     day: dayFour,
     start: 1454,
     end: 1456,
@@ -638,7 +638,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105538',
-    name: 'Reactive Programming: Future-Proof Your Code',
+    title: 'Reactive Programming: Future-Proof Your Code',
     day: dayFour,
     start: 1500,
     end: 1530,
@@ -649,7 +649,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105539',
-    name: 'I Don’t Do Non-Technical Talks',
+    title: 'I Don’t Do Non-Technical Talks',
     day: dayFour,
     start: 1534,
     end: 1554,
@@ -660,7 +660,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110553a',
-    name: 'State management with ngrx',
+    title: 'State management with ngrx',
     day: dayFour,
     start: 1558,
     end: 1618,
@@ -671,7 +671,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110553b',
-    name:
+    title:
       'End the Test Engineer role: how cross-functionality leads to a better engineering process',
     day: dayFour,
     start: 1622,
@@ -683,7 +683,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110553c',
-    name: 'Nodesource',
+    title: 'Nodesource',
     day: dayFour,
     start: 1646,
     end: 1648,
@@ -694,7 +694,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110553e',
-    name: 'Panel',
+    title: 'Panel',
     day: dayFour,
     start: 1652,
     end: 1722,
@@ -705,7 +705,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d311110553f',
-    name: 'Day 2 closing remarks',
+    title: 'Day 2 closing remarks',
     day: dayFour,
     start: 1726,
     end: 1736,
@@ -716,7 +716,7 @@ export const talksDayFour: Talk[] = [
   },
   {
     id: '5a5fcee829ae9d3111105540',
-    name: 'Prizes',
+    title: 'Prizes',
     day: dayFour,
     start: 1736,
     end: 1806,
