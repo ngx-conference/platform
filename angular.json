@@ -51,9 +51,6 @@
               "apps/admin/src/assets"
             ],
             "styles": [
-              {
-                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
-              },
               "apps/admin/src/styles.scss"
             ],
             "scripts": []
@@ -104,9 +101,6 @@
             "tsConfig": "apps/admin/tsconfig.spec.json",
             "karmaConfig": "apps/admin/karma.conf.js",
             "styles": [
-              {
-                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
-              },
               "apps/admin/styles.scss"
             ],
             "scripts": [],
