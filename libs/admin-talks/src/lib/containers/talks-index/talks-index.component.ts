@@ -20,9 +20,6 @@ export class TalksIndexComponent {
 
     modalInst.fields = this.service.fields
     modalInst.saveAction = (data) => this.service.fb.upsertItem(data)
-
-    modalRef.afterClosed()
-      .subscribe(closed => console.log('closed', closed))
   }
 
   delete(talk) {

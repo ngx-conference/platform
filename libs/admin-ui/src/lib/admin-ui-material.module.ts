@@ -9,7 +9,10 @@ import {
   MatInputModule,
   MatListModule,
   MatMenuModule,
+  MatPaginatorModule,
   MatSidenavModule,
+  MatSortModule,
+  MatTableModule,
   MatToolbarModule,
 } from '@angular/material'
 import { LayoutModule } from '@angular/cdk/layout'
@@ -24,7 +27,10 @@ const materialModules = [
   MatInputModule,
   MatListModule,
   MatMenuModule,
+  MatPaginatorModule,
   MatSidenavModule,
+  MatSortModule,
+  MatTableModule,
   MatToolbarModule,
   LayoutModule,
 ]

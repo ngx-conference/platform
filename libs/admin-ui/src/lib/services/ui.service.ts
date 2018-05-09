@@ -5,8 +5,8 @@ import { Observable } from 'rxjs'
   providedIn: 'root',
 })
 export class UiService {
-  public appTitle = 'NGX Conference Admin'
-  public menuTitle = 'Menu'
+  public appTitle = ''
+  public menuTitle = 'nxg-conference'
   public menuItems = [
     {
       label: 'Dashboard',
