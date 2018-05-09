@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { RouterModule } from '@angular/router'
-import { FormsModule } from '@angular/forms'
 
+import { FormsModule } from './forms/forms.module'
 import { AdminUiMaterialModule } from './admin-ui-material.module'
 
 import { LayoutComponent } from './containers/layout/layout.component'
