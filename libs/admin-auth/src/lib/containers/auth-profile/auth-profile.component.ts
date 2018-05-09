@@ -4,7 +4,7 @@ import { AuthService } from '../../services/auth.service'
 @Component({
   selector: 'auth-profile',
   template: `
-    <ui-page-title title="Authentication" icon="fe fe-lock"></ui-page-title>
+    <ui-page-title title="Authentication" icon="lock"></ui-page-title>
 
     <div *ngIf="error">
       <!--<ui-alert type="danger">-->
