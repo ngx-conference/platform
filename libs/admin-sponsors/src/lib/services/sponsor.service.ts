@@ -1,22 +1,21 @@
 import { Injectable } from '@angular/core';
+import { FirebaseCrudService } from '../../../../admin-api/src'
 import { AngularFirestore } from 'angularfire2/firestore'
-
-import { FirebaseCrudService } from '@ngx-conference/admin-api'
-import { Field } from '@ngx-conference/admin-ui'
+import { Field } from '../../../../admin-ui/src'
 
 @Injectable({
   providedIn: 'root'
 })
-export class TalkService {
-  public collectionId = 'Talks'
+export class SponsorService {
+  public collectionId = 'Sponsors'
   public displayField = 'title'
-  public icon = 'present_to_all'
+  public icon = 'card_giftcard'
   public title = this.collectionId
 
   public fb: FirebaseCrudService
 
   constructor(public db: AngularFirestore) {
-    this.fb = new FirebaseCrudService(db, 'Talks')
+    this.fb = new FirebaseCrudService(db, 'Sponsors')
   }
 
   public fields = [
@@ -29,25 +28,23 @@ export class TalkService {
       placeholder: 'Type',
       required: true,
       options: [{
-        value: 'generic',
-        label: 'Generic',
+        value: 'gold',
+        label: 'Gold',
       }, {
-        value: 'presentation',
-        label: 'Presentation',
+        value: 'silver',
+        label: 'Silver',
       }, {
-        value: 'sponsor',
-        label: 'Sponsor Talk',
+        value: 'bronze',
+        label: 'Bronze',
       }, {
-        value: 'workshop',
-        label: 'Workshop',
+        value: 'platinum',
+        label: 'Platinum',
       }],
     }),
-    Field.textarea('description', {
-      placeholder: 'Description',
+    Field.input('homepage', {
+      placeholder: 'Homepage',
       required: true,
-      rows: 3,
       minLength: 5,
     }),
   ]
-
 }

@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { TalksIndexComponent } from './talks-index.component'
+import { CrudComponent } from './crud.component'
 
-describe('TalksIndexComponent', () => {
-  let component: TalksIndexComponent
-  let fixture: ComponentFixture<TalksIndexComponent>
+describe('CrudComponent', () => {
+  let component: CrudComponent
+  let fixture: ComponentFixture<CrudComponent>
 
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        declarations: [TalksIndexComponent],
+        declarations: [CrudComponent],
       }).compileComponents()
     }),
   )
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TalksIndexComponent)
+    fixture = TestBed.createComponent(CrudComponent)
     component = fixture.componentInstance
     fixture.detectChanges()
   })

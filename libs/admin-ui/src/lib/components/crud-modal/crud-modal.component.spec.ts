@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TalkModalComponent } from './talk-modal.component';
+import { CrudModalComponent } from './crud-modal.component'
 
-describe('TalkModalComponent', () => {
-  let component: TalkModalComponent;
-  let fixture: ComponentFixture<TalkModalComponent>;
+describe('CrudModalComponent', () => {
+  let component: CrudModalComponent;
+  let fixture: ComponentFixture<CrudModalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TalkModalComponent ]
+      declarations: [ CrudModalComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TalkModalComponent);
+    fixture = TestBed.createComponent(CrudModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

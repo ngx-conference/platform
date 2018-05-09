@@ -1,4 +1,7 @@
-<h1 mat-dialog-title>{{data.id ? 'Edit' : 'Add' }} Talk</h1>
+<h1 mat-dialog-title>
+  <mat-icon *ngIf="icon" style="margin-left: 5px;">{{icon}}</mat-icon>
+  {{data.id ? 'Edit' : 'Add' }} {{title}}
+</h1>
 <div mat-dialog-content>
   <ui-form [form]="form" [fields]="fields" [model]="data"></ui-form>
 </div>

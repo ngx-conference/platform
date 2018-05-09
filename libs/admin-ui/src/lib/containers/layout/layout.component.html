@@ -7,13 +7,14 @@
     [mode]="(isHandset | async)!.matches ? 'push' : 'side'"
     [opened]="!(isHandset | async)!.matches">
     <mat-toolbar color="primary" routerLink="/" class="brand">
-      <img src="assets/angular.svg" class="brand-icon">
+      <img src="assets/logo.png" class="brand-icon">
       {{ui.menuTitle}}
     </mat-toolbar>
     <mat-nav-list>
       <a mat-list-item
          *ngFor="let item of ui.menuItems"
          [routerLink]="item.link"
+         style="margin: 10px 0; padding: 5px 0;"
          routerLinkActive="active">
         <mat-icon style="margin-right: 10px;">{{item.icon}}</mat-icon>
         {{item.label}}

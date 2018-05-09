@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core'
 import { AngularFirestore } from 'angularfire2/firestore'
 import { Observable } from 'rxjs'
 
-import { AbstractDataService } from './abstract-data.service'
 import { fromPromise } from 'rxjs/internal/observable/fromPromise'
 
-@Injectable()
-export class FirebaseCrudService implements AbstractDataService {
-  public collectionId = 'FirebaseCrudServiceCollectionId'
+@Injectable({
+  providedIn: 'root'
+})
+export class FirebaseCrudService {
+  constructor(public db: AngularFirestore, public collectionId: string) {}
 
   private collectionsRef = (path: string): Observable<any[]> => {
     return this.db.collection<any>(path).valueChanges()
@@ -21,7 +22,10 @@ export class FirebaseCrudService implements AbstractDataService {
     return this.docRef(`${this.collectionId}/${itemId}`)
   }
 
-  constructor(public db: AngularFirestore) {}
+  public count(): Observable<number> {
+    return this.collectionsRef(this.collectionId)
+      .map(items => items.length)
+  }
 
   public getItems(): Observable<any[]> {
     return this.collectionsRef(this.collectionId)

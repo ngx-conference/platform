@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { SpeakersIndexComponent } from './speakers-index.component'
+import { CrudListComponent } from './crud-list.component'
 
-describe('TalksIndexComponent', () => {
-  let component: SpeakersIndexComponent
-  let fixture: ComponentFixture<SpeakersIndexComponent>
+describe('CrudComponent', () => {
+  let component: CrudListComponent
+  let fixture: ComponentFixture<CrudListComponent>
 
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        declarations: [SpeakersIndexComponent],
+        declarations: [CrudListComponent],
       }).compileComponents()
     }),
   )
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SpeakersIndexComponent)
+    fixture = TestBed.createComponent(CrudListComponent)
     component = fixture.componentInstance
     fixture.detectChanges()
   })

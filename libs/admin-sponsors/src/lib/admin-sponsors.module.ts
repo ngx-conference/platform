@@ -2,12 +2,23 @@ import { NgModule } from '@angular/core'
 
 import { AdminSharedModule } from '@ngx-conference/admin-shared'
 
-import { AdminSponsorsRoutingModule } from './admin-sponsors-routing.module'
+import { RouterModule, Routes } from '@angular/router'
+import { CrudComponent } from '@ngx-conference/admin-ui'
 
-import { SponsorsIndexComponent } from './containers/sponsors-index/sponsors-index.component'
+import { SponsorServiceResolver } from './resolvers/sponsor-service.resolver'
+
+const routes: Routes = [
+  {
+    path: '',
+    component: CrudComponent,
+    resolve: {
+      service: SponsorServiceResolver,
+    },
+  },
+]
 
 @NgModule({
-  imports: [AdminSharedModule, AdminSponsorsRoutingModule],
-  declarations: [SponsorsIndexComponent],
+  imports: [AdminSharedModule, RouterModule.forChild(routes)],
 })
-export class AdminSponsorsModule {}
+export class AdminSponsorsModule {
+}

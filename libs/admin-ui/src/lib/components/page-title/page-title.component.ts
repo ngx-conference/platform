@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core'
   selector: 'ui-page-title',
   template: `
     <mat-toolbar>
-      <mat-icon style="margin-right: 5px;" *ngIf="icon">{{icon}}</mat-icon>
+      <mat-icon style="margin: 0 20px;" *ngIf="icon">{{icon}}</mat-icon>
       {{title}}
       <ng-content></ng-content>
     </mat-toolbar>

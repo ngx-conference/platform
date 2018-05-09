@@ -1,20 +1,21 @@
-<ui-page-title title="Talks" icon="present_to_all">
+<ui-page-title [title]="title" [icon]="icon">
   <button mat-fab class="action-button">
     <mat-icon aria-label="Add new Talk" (click)="openModal()">add</mat-icon>
   </button>
 </ui-page-title>
-<div class="grid-container" *ngIf="service.items$ | async as talks">
+
+<div class="grid-container">
   <mat-grid-list cols="3">
-    <mat-grid-tile *ngFor="let talk of talks" [colspan]="1" [rowspan]="1">
+    <mat-grid-tile *ngFor="let item of items" [colspan]="1" [rowspan]="1">
       <mat-card class="dashboard-card">
         <mat-card-header>
           <mat-card-title>
-            {{talk.title}}
+            {{item[displayField]}}
             <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
               <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item (click)="delete(talk)">
+              <button mat-menu-item (click)="delete(item)">
                 <mat-icon>delete</mat-icon>
                 Remove
               </button>
@@ -22,10 +23,10 @@
           </mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          <p>{{ talk.description }}</p>
+          <p>{{ item.description }}</p>
         </mat-card-content>
         <mat-dialog-actions>
-          <button mat-raised-button (click)="openModal(talk)" class="edit-button">
+          <button mat-raised-button (click)="openModal(item)" class="edit-button">
             <mat-icon>edit</mat-icon> Edit
           </button>
         </mat-dialog-actions>

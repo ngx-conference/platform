@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
 import { DashboardIndexComponent } from './dashboard-index.component'
 
-describe('TalksIndexComponent', () => {
+describe('CrudComponent', () => {
   let component: DashboardIndexComponent
   let fixture: ComponentFixture<DashboardIndexComponent>
 

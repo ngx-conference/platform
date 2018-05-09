@@ -4,18 +4,20 @@ import { FormGroup } from '@angular/forms'
 import { Observable } from 'rxjs'
 
 @Component({
-  selector: 'talks-talk-modal',
-  templateUrl: './talk-modal.component.html',
+  selector: 'ui-crud-modal',
+  templateUrl: './crud-modal.component.html',
 })
-export class TalkModalComponent {
+export class CrudModalComponent {
   private form = new FormGroup({})
 
   public saveAction: (data) => Observable<any>
-  public fields = []
+  public fields: any[] = []
+  public title: string
+  public icon: string
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
-    public dialogRef: MatDialogRef<TalkModalComponent>,
+    public dialogRef: MatDialogRef<CrudModalComponent>,
   ) {}
 
   save(data) {

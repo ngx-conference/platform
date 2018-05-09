@@ -12,7 +12,7 @@
     <button mat-icon-button class="more-button" [matMenuTriggerFor]="profile" aria-label="Toggle profile">
       <ui-avatar [image]="user.avatar"></ui-avatar>
     </button>
-    <mat-menu #profile="matMenu" xPosition="before">
+    <mat-menu #profile="matMenu" [overlapTrigger]="false">
       <button mat-menu-item (click)="action.emit({ type: 'LOGOUT' })">
         Logout
       </button>
