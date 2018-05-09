@@ -19,7 +19,7 @@
     "admin-dashboard": {
       "tags": []
     },
-    "admin-shared": {
+    "admin-core": {
       "tags": []
     },
     "admin-speakers": {

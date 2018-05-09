@@ -10,4 +10,4 @@ const sharedModules = [CommonModule, RouterModule, AdminUiModule]
   imports: [...sharedModules],
   exports: [...sharedModules],
 })
-export class AdminSharedModule {}
+export class AdminCoreModule {}

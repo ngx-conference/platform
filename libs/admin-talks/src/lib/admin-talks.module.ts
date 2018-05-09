@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 
-import { AdminSharedModule } from '@ngx-conference/admin-shared'
+import { AdminCoreModule } from '@ngx-conference/admin-core'
 import { CrudComponent } from '@ngx-conference/admin-ui'
 
 import { TalksServiceResolver } from './resolvers/talks-service.resolver'
@@ -17,6 +17,6 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  imports: [AdminSharedModule, RouterModule.forChild(routes)],
+  imports: [AdminCoreModule, RouterModule.forChild(routes)],
 })
 export class AdminTalksModule {}

@@ -230,26 +230,26 @@
         }
       }
     },
-    "admin-shared": {
-      "root": "libs/admin-shared",
-      "sourceRoot": "libs/admin-shared/src",
+    "admin-core": {
+      "root": "libs/admin-core",
+      "sourceRoot": "libs/admin-core/src",
       "projectType": "library",
       "prefix": "shared",
       "architect": {
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/admin-shared/src/test.ts",
-            "tsConfig": "libs/admin-shared/tsconfig.spec.json",
-            "karmaConfig": "libs/admin-shared/karma.conf.js"
+            "main": "libs/admin-core/src/test.ts",
+            "tsConfig": "libs/admin-core/tsconfig.spec.json",
+            "karmaConfig": "libs/admin-core/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/admin-shared/tsconfig.lib.json",
-              "libs/admin-shared/tsconfig.spec.json"
+              "libs/admin-core/tsconfig.lib.json",
+              "libs/admin-core/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

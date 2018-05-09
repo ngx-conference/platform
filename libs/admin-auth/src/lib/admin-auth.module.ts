@@ -8,7 +8,7 @@ import { AuthProfileComponent } from './containers/auth-profile/auth-profile.com
 
 import { LoggedInGuard } from './guards/logged-in.guard'
 import { ProfileResolver } from './resolvers/profile.resolver'
-import { AdminSharedModule } from '@ngx-conference/admin-shared'
+import { AdminCoreModule } from '@ngx-conference/admin-core'
 
 export const AuthModuleRoutes: Routes = [
   { path: '', redirectTo: 'profile', pathMatch: 'full' },
@@ -29,7 +29,7 @@ export const AuthModuleRoutes: Routes = [
 ]
 @NgModule({
   imports: [
-    AdminSharedModule,
+    AdminCoreModule,
   ],
   declarations: [AuthIndexComponent, AuthLogoutComponent, AuthLoginComponent, AuthProfileComponent],
 })

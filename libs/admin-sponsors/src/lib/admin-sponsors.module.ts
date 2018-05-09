@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core'
 
-import { AdminSharedModule } from '@ngx-conference/admin-shared'
+import { AdminCoreModule } from '@ngx-conference/admin-core'
 
 import { RouterModule, Routes } from '@angular/router'
 import { CrudComponent } from '@ngx-conference/admin-ui'
@@ -18,7 +18,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  imports: [AdminSharedModule, RouterModule.forChild(routes)],
+  imports: [AdminCoreModule, RouterModule.forChild(routes)],
 })
 export class AdminSponsorsModule {
 }

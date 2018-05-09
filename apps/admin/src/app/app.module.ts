@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { AdminApiModule } from '@ngx-conference/admin-api'
 import { AdminAuthModule } from '@ngx-conference/admin-auth'
-import { AdminSharedModule } from '@ngx-conference/admin-shared'
+import { AdminCoreModule } from '@ngx-conference/admin-core'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -16,7 +16,7 @@ import { AppComponent } from './app.component'
 
     AdminApiModule,
     AdminAuthModule,
-    AdminSharedModule,
+    AdminCoreModule,
 
     AppRoutingModule,
   ],

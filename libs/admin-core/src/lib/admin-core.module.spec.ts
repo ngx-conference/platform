@@ -1,16 +1,16 @@
 import { async, TestBed } from '@angular/core/testing'
-import { AdminSharedModule } from './admin-shared.module'
+import { AdminCoreModule } from './admin-core.module'
 
-describe('AdminSharedModule', () => {
+describe('AdminCoreModule', () => {
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        imports: [AdminSharedModule],
+        imports: [AdminCoreModule],
       }).compileComponents()
     }),
   )
 
   it('should create', () => {
-    expect(AdminSharedModule).toBeDefined()
+    expect(AdminCoreModule).toBeDefined()
   })
 })

@@ -31,8 +31,8 @@
       "@ngx-conference/admin-dashboard": [
         "libs/admin-dashboard/src/index.ts"
       ],
-      "@ngx-conference/admin-shared": [
-        "libs/admin-shared/src/index.ts"
+      "@ngx-conference/admin-core": [
+        "libs/admin-core/src/index.ts"
       ],
       "@ngx-conference/admin-speakers": [
         "libs/admin-speakers/src/index.ts"
