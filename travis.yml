@@ -4,10 +4,13 @@ node_js:
    - node
 
 before_script:
-   - npm install -g --silent @angular/cli
+   - npm install -g --silent @angular/cli firebase-tools
 
 script:
    - npm run build
+
+after_success:
+  - firebase deploy --token $FIREBASE_TOKEN --non-interactive
 
 notifications:
   email:
