@@ -1,5 +1,6 @@
 import { ModuleWithProviders } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
+import { ConferenceSettingsComponent } from '@ngx-conference/admin-conference/src/lib/containers/conference-settings/conference-settings.component'
 
 import { CrudComponent, LayoutBasicComponent, LayoutComponent } from '@ngx-conference/admin-ui'
 
@@ -74,6 +75,10 @@ const routes: Routes = [
             data: {
               crud: CrudTalk,
             },
+          },
+          {
+            path: 'settings',
+            component: ConferenceSettingsComponent,
           },
         ],
       },

@@ -3,7 +3,7 @@ import { AngularFirestore } from 'angularfire2/firestore'
 
 import { FirebaseCrudService } from '@ngx-conference/admin-api'
 import { Field, WizardStep, Wizard } from '@ngx-conference/admin-ui'
-import { CrudConference } from '@ngx-conference/admin-conference/src/lib/models/crud-conference'
+import { ConferenceIdFields, CrudConference } from '../models/crud-conference'
 
 // Takes the current date and formats it to `YYYY-MM-DD`.
 const formattedDate = () => {
@@ -35,21 +35,7 @@ export class ConferenceService {
   public wizardSteps: WizardStep[] = [
     {
       label: 'Name',
-      fields: [
-        Field.input('name', {
-          placeholder: 'Enter the name of the conference',
-          required: true,
-          minLength: 5,
-          maxLength: 50,
-        }),
-        Field.input('id', {
-          placeholder: 'This is the Conference ID that will be used in the API',
-          required: true,
-          disabled: true,
-          minLength: 5,
-          maxLength: 50,
-        }),
-      ],
+      fields: [...ConferenceIdFields],
     },
     {
       label: 'Dates',

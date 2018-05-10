@@ -20,6 +20,7 @@ export class Field {
     const hideExpression = options.hideExpression || false
     const expressionProperties = options.expressionProperties || false
     const defaultValue = options.defaultValue || null
+    const required = options.required || false
     const className = options.className || false
     const templateOptions = {
       type: templateType,
@@ -66,6 +67,7 @@ export class Field {
       validation,
       hideExpression,
       defaultValue,
+      required,
       expressionProperties,
       className,
     }

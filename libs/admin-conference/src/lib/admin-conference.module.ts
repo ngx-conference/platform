@@ -10,8 +10,9 @@ import { IconSpeakerComponent } from './components/icon-speaker/icon-speaker.com
 
 import { ConferenceDashboardComponent } from './containers/conference-dashboard/conference-dashboard.component'
 import { ConferenceIndexComponent } from './containers/conference-index/conference-index.component'
+import { ConferenceSettingsComponent } from './containers/conference-settings/conference-settings.component'
+import { ConferenceSidebarComponent } from './components/conference-sidebar/conference-sidebar.component';
 import { ConferenceWizardComponent } from './containers/conference-wizard/conference-wizard.component'
-import { ConferenceSidebarComponent } from './components/conference-sidebar/conference-sidebar.component'
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { ConferenceSidebarComponent } from './components/conference-sidebar/conf
   declarations: [
     ConferenceDashboardComponent,
     ConferenceIndexComponent,
+    ConferenceSettingsComponent,
     ConferenceSidebarComponent,
     ConferenceWizardComponent,
     IconSpeakerComponent,
