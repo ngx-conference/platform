@@ -4,6 +4,7 @@ import {
   LoggedInGuard,
   ProfileResolver,
 } from '@ngx-conference/admin-auth'
+import { IsActiveGuard } from '@ngx-conference/admin-auth'
 
 const routes: Routes = [
   {
@@ -13,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    canActivate: [LoggedInGuard],
+    canActivate: [LoggedInGuard, IsActiveGuard],
     resolve: { profile: ProfileResolver },
     children: [
       {

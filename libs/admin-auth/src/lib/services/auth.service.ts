@@ -17,17 +17,24 @@ export interface FireUser {
   email: string
   avatar?: string
   avatarText?: string
-  // providerData?: any
-  // [key: string]: any | any[]
+  admin?: boolean
+  active?: boolean
+  requestAccess?: number
 }
 
-const defaultProfile = user => ({
-  id: user.uid,
-  name: user.displayName,
-  email: user.email,
-  avatar: user.photoURL,
-  // providerData: user.providerData,
-})
+const defaultProfile = user => {
+  const providerData = user.providerData[0]
+
+  const { displayName, email, photoURL } = providerData
+
+  const profile = {
+    id: user.uid,
+    name: displayName,
+    email: user.email || email,
+    avatar: photoURL,
+  }
+  return profile
+}
 
 @Injectable({
   providedIn: 'root'
@@ -162,5 +169,9 @@ export class AuthService {
    */
   public logout() {
     return fromPromise(this.afAuth.auth.signOut())
+  }
+
+  public requestAccess(userId: string) {
+    return fromPromise(this._getDocRef(userId).update({ requestAccess: Date.now() }))
   }
 }

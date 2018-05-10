@@ -45,7 +45,6 @@ export class AuthLoginComponent {
   }
 
   public login(provider) {
-    console.log(provider)
     this.error = false
     this.auth.login(provider).subscribe(() => this.redirect(), err => {
       console.log(err)
