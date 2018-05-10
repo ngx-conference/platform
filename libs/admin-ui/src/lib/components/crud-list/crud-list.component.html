@@ -9,6 +9,11 @@
     <mat-grid-tile *ngIf="loading" [colspan]="3">
       <ui-loading></ui-loading>
     </mat-grid-tile>
+    <mat-grid-tile *ngIf="!loading && !items.length" [colspan]="3">
+      <mat-toolbar>
+        No items found.
+      </mat-toolbar>
+    </mat-grid-tile>
     <mat-grid-tile *ngFor="let item of items" [colspan]="1" [rowspan]="1">
       <ui-crud-icon *ngIf="iconComponent"
                     (action)="handleAction($event)"

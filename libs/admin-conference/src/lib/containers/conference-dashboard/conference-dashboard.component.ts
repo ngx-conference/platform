@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core'
+import { ActivatedRoute } from '@angular/router'
 
+import { AngularFirestore } from 'angularfire2/firestore'
 import { Subscription } from 'rxjs/index'
 
-import { SpeakerService } from '../../services/speaker.service'
-import { SponsorService } from '../../services/sponsor.service'
-import { TalkService } from '../../services/talk.service'
+import { FirebaseCrudService } from '@ngx-conference/admin-api'
 
 @Component({
   selector: 'lib-conference-dashboard',
@@ -46,24 +46,29 @@ export class ConferenceDashboardComponent implements OnInit, OnDestroy {
   }
 
   private subs: Subscription[]
+  private conference: any
+  private db: AngularFirestore
 
-  constructor(
-    public speakerService: SpeakerService,
-    public sponsorService: SponsorService,
-    public talkService: TalkService,
-  ) {}
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
+    this.route.data.subscribe(
+      res => {
+        this.db = res.db
+        this.conference = res.conference
+        this.startCounter()
+      }
+    )
+    this.subs = []
+  }
+
+  startCounter() {
+    const fb = new FirebaseCrudService(this.db, '', this.conference.id)
+
     this.subs = [
-      this.speakerService.fb
-        .count()
-        .subscribe(count => (this.speakers.count = count)),
-      this.sponsorService.fb
-        .count()
-        .subscribe(count => (this.sponsors.count = count)),
-      this.talkService.fb
-        .count()
-        .subscribe(count => (this.talks.count = count)),
+      fb.count('Speakers').subscribe(res => this.speakers.count = res),
+      fb.count('Sponsors').subscribe(res => this.sponsors.count = res),
+      fb.count('Talks').subscribe(res => this.talks.count = res),
     ]
   }
 

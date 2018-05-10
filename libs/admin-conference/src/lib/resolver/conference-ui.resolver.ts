@@ -7,10 +7,11 @@ import { map } from 'rxjs/internal/operators'
 import { UiService } from '@ngx-conference/admin-ui'
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ConferenceUiResolver implements Resolve<any> {
-  constructor(private service: ConferenceService, private ui: UiService) {}
+  constructor(private service: ConferenceService, private ui: UiService) {
+  }
 
   resolve(route: ActivatedRouteSnapshot) {
     return this.service.fb.getItem(route.paramMap.get('id')).pipe(
@@ -18,10 +19,13 @@ export class ConferenceUiResolver implements Resolve<any> {
         let ui = {}
         if (res) {
           ui = {
-            appTitle: this.ui.appTitle,
-            menuLink: this.ui.menuLink,
-            menuTitle: res && res.name || this.ui.menuTitle,
+            appTitle: res.name,
             menuItems: [
+              {
+                label: 'Dashboard',
+                link: ['/conferences', res.id, 'dashboard'],
+                icon: 'dashboard',
+              },
               {
                 label: 'Speakers',
                 link: ['/conferences', res.id, 'speakers'],
@@ -37,15 +41,12 @@ export class ConferenceUiResolver implements Resolve<any> {
                 link: ['/conferences', res.id, 'talks'],
                 icon: 'present_to_all',
               },
-            ]
+            ],
           }
         }
         return Object.assign({}, ui)
       }),
-      take(1)
+      take(1),
     )
-    // .subscribe((res) => {
-    //   return res
-    // })
   }
 }

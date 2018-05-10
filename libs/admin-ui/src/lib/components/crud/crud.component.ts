@@ -1,26 +1,31 @@
 import { Component } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
-import { map } from 'rxjs/internal/operators'
+import { AngularFirestore } from 'angularfire2/firestore'
 
 @Component({
   selector: 'ui-crud',
   template: `
-    <ui-crud-list [title]="service.title"
-                  [icon]="service.icon"
-                  [iconComponent]="service.iconComponent"
-                  [collectionId]="service.collectionId"
-                  [displayField]="service.displayField"
-                  [db]="service.db" [fields]="service.fields"></ui-crud-list>
+    <ui-crud-list [db]="db"
+                  [title]="crud.title"
+                  [icon]="crud.icon"
+                  [iconComponent]="crud.iconComponent"
+                  [collectionId]="crud.collectionId"
+                  [parentId]="parent.id"
+                  [fields]="crud.fields">
+    </ui-crud-list>
   `,
 })
 export class CrudComponent {
-  public service: any
+  public crud: any
+  public parent: any
+  public db: AngularFirestore
 
   constructor(private route: ActivatedRoute) {
     this.route.data
-      .pipe(
-        map(data => data.service)
-      )
-      .subscribe(service => this.service = service)
+      .subscribe((data) => {
+        this.crud = data.crud
+        this.db = data.db
+        this.parent = data[data.crud.parent]
+      })
   }
 }

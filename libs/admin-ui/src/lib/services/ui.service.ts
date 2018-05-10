@@ -5,9 +5,14 @@ import { Observable } from 'rxjs'
   providedIn: 'root',
 })
 export class UiService {
-  public appTitle = ''
-  public menuTitle = ' UI_SERVICE '
+  public menuTitle = 'nxg-conference'
   public menuLink = '/'
-  public menuItems = []
+  public menuItems = [
+    {
+      label: 'Conferences',
+      link: '/conferences',
+      icon: 'people',
+    },
+  ]
   public user$: Observable<any>
 }

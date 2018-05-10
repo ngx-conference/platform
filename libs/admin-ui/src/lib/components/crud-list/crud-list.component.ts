@@ -17,22 +17,21 @@ export class CrudListComponent implements OnInit, OnDestroy {
   @Input() iconComponent: any
   @Input() collectionId: string
   @Input() displayField: string
+  @Input() parentId: string
   @Input() fields: any[]
   @Input() db: AngularFirestore
 
   public service: FirebaseCrudService
   public items: any[]
   public loading: boolean
-  private subscribtion: Subscription
+  private subscription: Subscription
 
   constructor(public dialog: MatDialog) {}
 
   openModal(item = {}) {
-    const modalRef = this.dialog.open(CrudModalComponent, {
-      data: Object.assign({}, item),
-    })
-
+    const modalRef = this.dialog.open(CrudModalComponent)
     const modalInst = modalRef.componentInstance
+    modalInst.data = Object.assign({}, item)
     modalInst.fields = this.fields
     modalInst.title = this.title
     modalInst.icon = this.icon
@@ -40,17 +39,17 @@ export class CrudListComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.service = new FirebaseCrudService(this.db, this.collectionId)
+    this.service = new FirebaseCrudService(this.db, this.collectionId, this.parentId)
     this.loadData()
   }
 
   ngOnDestroy() {
-    this.subscribtion.unsubscribe()
+    this.subscription.unsubscribe()
   }
 
   loadData() {
     this.loading = true
-    this.subscribtion = this.service.getItems()
+    this.subscription = this.service.getItems()
       .subscribe(
         res => {
           this.loading = false

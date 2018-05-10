@@ -4,15 +4,28 @@ import { Observable } from 'rxjs'
 
 import { fromPromise } from 'rxjs/internal/observable/fromPromise'
 import { map } from 'rxjs/internal/operators'
+import * as firebase from 'firebase'
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FirebaseCrudService {
-  constructor(public db: AngularFirestore, public collectionId: string) {}
+  constructor(
+    public db: AngularFirestore,
+    public collectionId: string,
+    public parentId: string = null,
+  ) {
+  }
 
   private collectionsRef = (path: string): Observable<any[]> => {
-    return this.db.collection<any>(path).valueChanges()
+    return this.db.collection<any>(path,
+      ref => {
+        let query : firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
+        if (this.parentId) {
+          query = query.where('parentId', '==', this.parentId)
+        }
+        return query
+      }).valueChanges()
   }
 
   private docRef = (path: string) => {
@@ -23,13 +36,13 @@ export class FirebaseCrudService {
     return this.docRef(`${this.collectionId}/${itemId}`)
   }
 
-  public count(): Observable<number> {
-    return this.collectionsRef(this.collectionId)
+  public count(collectionId = null): Observable<number> {
+    return this.collectionsRef(collectionId || this.collectionId)
       .map(items => items.length)
   }
 
-  public getItems(): Observable<any[]> {
-    return this.collectionsRef(this.collectionId)
+  public getItems(collectionId = null): Observable<any[]> {
+    return this.collectionsRef(collectionId || this.collectionId)
   }
 
   public getItem(itemId: string): Observable<any> {
@@ -39,11 +52,12 @@ export class FirebaseCrudService {
   public addItem(item: any): Observable<any> {
     item.id = item.id || this.db.createId()
     item.created = new Date()
+    item.parentId = this.parentId
     return fromPromise(
       this.db
         .collection(this.collectionId)
         .doc(item.id)
-        .set(item).then(() => item)
+        .set(item).then(() => item),
     )
   }
 
@@ -53,10 +67,8 @@ export class FirebaseCrudService {
       this.db
         .collection(this.collectionId)
         .doc(item.id)
-        .update(item)
-    ).pipe(map((data) => {
-      return data
-    }))
+        .update(item),
+    ).pipe(map((data) => data))
   }
 
   public upsertItem(item: any): Observable<any> {
@@ -67,7 +79,7 @@ export class FirebaseCrudService {
     return fromPromise(
       this.colDocRef(id)
         .delete()
-        .then(() => true)
+        .then(() => true),
     )
   }
 }

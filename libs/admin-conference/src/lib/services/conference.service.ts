@@ -3,6 +3,7 @@ import { AngularFirestore } from 'angularfire2/firestore'
 
 import { FirebaseCrudService } from '@ngx-conference/admin-api'
 import { Field, WizardStep, Wizard } from '@ngx-conference/admin-ui'
+import { CrudConference } from '@ngx-conference/admin-conference/src/lib/models/crud-conference'
 
 // Takes the current date and formats it to `YYYY-MM-DD`.
 const formattedDate = () => {
@@ -19,15 +20,11 @@ const formattedDate = () => {
   providedIn: 'root',
 })
 export class ConferenceService {
-  public collectionId = 'Conferences'
-  public displayField = 'name'
-  public icon = 'people'
-  public title = this.collectionId
 
   public fb: FirebaseCrudService
 
   constructor(public db: AngularFirestore) {
-    this.fb = new FirebaseCrudService(db, 'Conferences')
+    this.fb = new FirebaseCrudService(db, CrudConference.collectionId)
 
     this.wizard = new Wizard()
     this.wizard.debug = true

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core'
 import { ConferenceService } from '../../services/conference.service'
+import { CrudConference } from '../../models/crud-conference'
 
 @Component({
   selector: 'lib-conference-index',
@@ -8,21 +9,17 @@ import { ConferenceService } from '../../services/conference.service'
   encapsulation: ViewEncapsulation.None,
 })
 export class ConferenceIndexComponent implements OnInit {
+  public crud = CrudConference
   public buttons = [
     {
       icon: 'delete',
       action: 'DELETE',
     },
-    {
-      icon: 'edit',
-      action: 'EDIT',
-    },
   ]
   public items: any[] = []
   public loading: boolean
 
-  constructor(public service: ConferenceService) {
-  }
+  constructor(public service: ConferenceService) {}
 
   ngOnInit() {
     this.loadData()
