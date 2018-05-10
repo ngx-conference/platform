@@ -1,13 +1,10 @@
 import { Component, ViewChild } from '@angular/core'
 import { Observable } from 'rxjs/index'
-import {
-  BreakpointObserver,
-  Breakpoints,
-  BreakpointState,
-} from '@angular/cdk/layout'
+import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout'
 import { MatDrawer } from '@angular/material'
 import { UiService } from '../../services/ui.service'
-import { Router } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
+import { map } from 'rxjs/operators'
 
 @Component({
   selector: 'ui-layout',
@@ -15,14 +12,19 @@ import { Router } from '@angular/router'
   styleUrls: ['./layout.component.scss'],
 })
 export class LayoutComponent {
+  private ui: any
   @ViewChild('drawer') drawer: MatDrawer
   public isHandset: Observable<BreakpointState> = this.breakpointObserver.observe(Breakpoints.Handset)
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    public ui: UiService,
+    public uiService: UiService,
     private router: Router,
+    private route: ActivatedRoute
   ) {
+    this.route.data.pipe(
+      map(data => data['ui'])
+    ).subscribe(ui => this.ui = ui)
   }
 
   public handleAction({ type, payload }) {

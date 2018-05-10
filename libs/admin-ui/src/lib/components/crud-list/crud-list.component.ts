@@ -14,6 +14,7 @@ import { Subscription } from 'rxjs/index'
 export class CrudListComponent implements OnInit, OnDestroy {
   @Input() title: string
   @Input() icon: string
+  @Input() iconComponent: any
   @Input() collectionId: string
   @Input() displayField: string
   @Input() fields: any[]
@@ -21,6 +22,7 @@ export class CrudListComponent implements OnInit, OnDestroy {
 
   public service: FirebaseCrudService
   public items: any[]
+  public loading: boolean
   private subscribtion: Subscription
 
   constructor(public dialog: MatDialog) {}
@@ -39,12 +41,37 @@ export class CrudListComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.service = new FirebaseCrudService(this.db, this.collectionId)
-    this.subscribtion = this.service.getItems()
-      .subscribe(res => this.items = res)
+    this.loadData()
   }
 
   ngOnDestroy() {
     this.subscribtion.unsubscribe()
+  }
+
+  loadData() {
+    this.loading = true
+    this.subscribtion = this.service.getItems()
+      .subscribe(
+        res => {
+          this.loading = false
+          this.items = res
+        },
+        err => {
+          this.loading = false
+          console.error(err)
+        },
+      )
+  }
+
+  handleAction({type, payload}) {
+    switch (type) {
+      case 'EDIT':
+        return this.openModal(payload)
+      case 'DELETE':
+        return this.delete(payload)
+      default:
+        console.log('Unknown type', type, payload)
+    }
   }
 
   delete(item) {

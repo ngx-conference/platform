@@ -1,0 +1,40 @@
+.grid-container {
+  margin: 20px!important;
+}
+
+.dashboard-card {
+  position: absolute!important;
+  top: 15px!important;
+  left: 15px!important;
+  right: 15px!important;
+  bottom: 15px!important;
+}
+.mat-card-header-text {
+  margin: 0!important;
+}
+.mat-card-header-text a {
+  color: black!important;
+  font-weight: bold!important;
+  text-decoration: none;
+}
+.more-button {
+  position: absolute!important;
+  top: 10px!important;
+  right: 10px!important;
+}
+.action-button {
+  position: absolute!important;
+  right: 30px!important;
+  top: 100px!important;
+}
+.edit-button {
+  position: absolute!important;
+  bottom: 10px!important;
+  right: 10px!important;
+}
+
+a.add-button {
+  position: absolute!important;
+  top: 80px!important;
+  right: 30px!important;
+}

@@ -6,7 +6,7 @@
     [attr.role]="isHandset ? 'dialog' : 'navigation'"
     [mode]="(isHandset | async)!.matches ? 'push' : 'side'"
     [opened]="!(isHandset | async)!.matches">
-    <mat-toolbar color="primary" routerLink="/" class="brand">
+    <mat-toolbar color="primary" [routerLink]="[ui.menuLink]" class="brand">
       <img src="assets/logo.png" class="brand-icon">
       {{ui.menuTitle}}
     </mat-toolbar>
@@ -24,7 +24,7 @@
   <mat-sidenav-content>
     <ui-header [isHandset]="isHandset"
                [appTitle]="ui.appTitle"
-               [user]="ui.user$ | async"
+               [user]="uiService.user$ | async"
                (action)="handleAction($event)">
     </ui-header>
     <main>

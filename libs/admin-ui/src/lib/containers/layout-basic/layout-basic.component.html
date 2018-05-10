@@ -1,0 +1,14 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+    <ui-header [isHandset]="isHandset"
+               [appTitle]="ui.appTitle"
+               [user]="ui.user$ | async"
+               (action)="handleAction($event)">
+    </ui-header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<ui-footer></ui-footer>

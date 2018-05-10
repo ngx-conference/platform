@@ -1,0 +1,17 @@
+.sidenav-container {
+  height: 100%;
+}
+.brand {
+  cursor: pointer;
+}
+.brand-icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 8px;
+}
+mat-sidenav-content {
+  min-height: 92vh;
+}
+main {
+  min-height: 75vh;
+}

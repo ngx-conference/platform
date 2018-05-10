@@ -3,7 +3,10 @@ import { HorizontalComponent } from './wrappers/horizontal/horizontal.component'
 
 
 export function minlengthValidationMessages(err, field) {
-  return `This field should have at least ${field.templateOptions.minLength} characters`;
+  return `This field should have more than ${field.templateOptions.minLength} characters`;
+}
+export function maxlengthValidationMessages(err, field) {
+  return `This field should have less than ${field.templateOptions.maxLength} characters`;
 }
 
 export const config: ConfigOption = {
@@ -26,5 +29,6 @@ export const config: ConfigOption = {
     { name: 'email', message: 'The email address does not seem to be valid.' },
     { name: 'required', message: 'This field is required.' },
     { name: 'minlength', message: minlengthValidationMessages },
+    { name: 'maxlength', message: maxlengthValidationMessages },
   ],
 }

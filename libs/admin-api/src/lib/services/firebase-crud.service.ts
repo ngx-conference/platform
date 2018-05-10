@@ -3,6 +3,7 @@ import { AngularFirestore } from 'angularfire2/firestore'
 import { Observable } from 'rxjs'
 
 import { fromPromise } from 'rxjs/internal/observable/fromPromise'
+import { map } from 'rxjs/internal/operators'
 
 @Injectable({
   providedIn: 'root'
@@ -42,7 +43,7 @@ export class FirebaseCrudService {
       this.db
         .collection(this.collectionId)
         .doc(item.id)
-        .set(item)
+        .set(item).then(() => item)
     )
   }
 
@@ -53,7 +54,9 @@ export class FirebaseCrudService {
         .collection(this.collectionId)
         .doc(item.id)
         .update(item)
-    )
+    ).pipe(map((data) => {
+      return data
+    }))
   }
 
   public upsertItem(item: any): Observable<any> {

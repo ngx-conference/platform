@@ -7,11 +7,8 @@
   },
   "include": [
     "./src/**/*.ts",
-    "../../libs/admin-dashboard/src/lib/admin-auth.module.ts",
-    "../../libs/admin-dashboard/src/lib/admin-dashboard.module.ts",
-    "../../libs/admin-speakers/src/lib/admin-speakers.module.ts",
-    "../../libs/admin-sponsors/src/lib/admin-sponsors.module.ts",
-    "../../libs/admin-talks/src/lib/admin-talks.module.ts"
+    "../../libs/admin-auth/src/lib/admin-auth.module.ts",
+    "../../libs/admin-conference/src/lib/admin-conference.module.ts"
   ],
   "exclude": [
     "src/test.ts",

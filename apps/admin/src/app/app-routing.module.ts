@@ -1,5 +1,4 @@
 import { RouterModule, Routes } from '@angular/router'
-import { LayoutComponent } from '@ngx-conference/admin-ui'
 import {
   AuthModuleRoutes,
   LoggedInGuard,
@@ -10,29 +9,16 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: '/dashboard',
+    redirectTo: '/conferences',
   },
   {
     path: '',
-    component: LayoutComponent,
     canActivate: [LoggedInGuard],
     resolve: { profile: ProfileResolver },
     children: [
       {
-        path: 'dashboard',
-        loadChildren: '@ngx-conference/admin-dashboard#AdminDashboardModule',
-      },
-      {
-        path: 'speakers',
-        loadChildren: '@ngx-conference/admin-speakers#AdminSpeakersModule',
-      },
-      {
-        path: 'sponsors',
-        loadChildren: '@ngx-conference/admin-sponsors#AdminSponsorsModule',
-      },
-      {
-        path: 'talks',
-        loadChildren: '@ngx-conference/admin-talks#AdminTalksModule',
+        path: 'conferences',
+        loadChildren: '@ngx-conference/admin-conference#AdminConferenceModule',
       },
     ],
   },
@@ -41,4 +27,4 @@ const routes: Routes = [
     children: [...AuthModuleRoutes],
   },
 ]
-export const AppRoutingModule = RouterModule.forRoot(routes)
+export const AppRoutingModule = RouterModule.forRoot(routes, { paramsInheritanceStrategy: 'always' })

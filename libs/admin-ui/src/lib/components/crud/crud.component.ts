@@ -5,7 +5,9 @@ import { map } from 'rxjs/internal/operators'
 @Component({
   selector: 'ui-crud',
   template: `
-    <ui-crud-list [title]="service.title" [icon]="service.icon"
+    <ui-crud-list [title]="service.title"
+                  [icon]="service.icon"
+                  [iconComponent]="service.iconComponent"
                   [collectionId]="service.collectionId"
                   [displayField]="service.displayField"
                   [db]="service.db" [fields]="service.fields"></ui-crud-list>

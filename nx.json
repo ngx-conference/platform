@@ -16,22 +16,13 @@
     "admin-ui": {
       "tags": []
     },
-    "admin-dashboard": {
-      "tags": []
-    },
     "admin-core": {
       "tags": []
     },
-    "admin-speakers": {
-      "tags": []
-    },
-    "admin-sponsors": {
-      "tags": []
-    },
-    "admin-talks": {
-      "tags": []
-    },
     "admin-auth": {
+      "tags": []
+    },
+    "admin-conference": {
       "tags": []
     }
   }

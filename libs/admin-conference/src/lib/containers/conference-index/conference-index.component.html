@@ -1,0 +1,26 @@
+
+<ui-page-title title="Conferences" icon="people" color="dark">
+</ui-page-title>
+<a mat-fab routerLink="add" class="add-button">
+  <mat-icon>add</mat-icon>
+</a>
+
+<div class="grid-container">
+  <mat-grid-list cols="3">
+    <mat-grid-tile *ngIf="loading" [colspan]="3">
+      <ui-loading></ui-loading>
+    </mat-grid-tile>
+    <mat-grid-tile *ngFor="let item of items" [colspan]="1" [rowspan]="1">
+      <ui-grid-tile [data]="item" (action)="handleAction($event)" [buttons]="buttons">
+        <h4>
+          <a href="" [routerLink]="item.id">
+            {{item.name}}
+          </a>
+        </h4>
+        <p>{{item.description}}</p>
+        <p>Date: {{ item.date }}</p>
+        <p>Days: {{ item.days }}</p>
+      </ui-grid-tile>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

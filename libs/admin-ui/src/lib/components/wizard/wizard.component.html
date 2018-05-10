@@ -1,0 +1,46 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <mat-horizontal-stepper>
+    <mat-step *ngFor="let step of wizard.steps; let index = index; let last = last;">
+      <ng-template matStepLabel>{{ step.label }}</ng-template>
+      <formly-form>
+      </formly-form>
+
+      <ui-form [form]="form.at(index)"
+               [model]="model"
+               (modelChange)="modelChange.emit($event)"
+               [fields]="step.fields"
+               [options]="options[index]">
+      </ui-form>
+
+      <div *ngIf="step.review">
+        <pre>{{model | json}}</pre>
+      </div>
+
+      <div>
+        <button mat-raised-button matStepperPrevious *ngIf="index !== 0"
+                type="button"
+                (click)="prevStep(index)">
+          {{wizard.labelPrevious}}
+        </button>
+        <div style="float: right">
+          <button mat-raised-button *ngIf="wizard.debug"
+                  type="button"
+                  (click)="debug()">
+            Debug
+          </button>
+          <button mat-raised-button matStepperNext *ngIf="!last"
+                  type="button"
+                  [disabled]="!form.at(index).valid"
+                  (click)="nextStep(index)">
+            {{wizard.labelNext}}
+          </button>
+          <button mat-raised-button *ngIf="last" color="accent"
+                  type="submit"
+                  [disabled]="!form.valid">
+            {{wizard.labelSubmit}}
+          </button>
+        </div>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</form>

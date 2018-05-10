@@ -19,6 +19,7 @@ export class Field {
   public static field(type: string, templateType: string, key: string, options: any = {}) {
     const hideExpression = options.hideExpression || false
     const expressionProperties = options.expressionProperties || false
+    const defaultValue = options.defaultValue || null
     const className = options.className || false
     const templateOptions = {
       type: templateType,
@@ -43,6 +44,7 @@ export class Field {
       'max',
       'rows',
       'minLength',
+      'maxLength',
       'pattern',
       'multiple',
       'groupProp',
@@ -63,6 +65,7 @@ export class Field {
       validators,
       validation,
       hideExpression,
+      defaultValue,
       expressionProperties,
       className,
     }
@@ -96,6 +99,10 @@ export class Field {
     return Field.field('inputHorizontal', 'password', key, Object.assign({}, Field.defaultsPassword, options))
   }
 
+  public static number(key, options: any = {}) {
+    return Field.field('input', 'number', key, options)
+  }
+
   public static date(key, options: any = {}) {
     return Field.field('input', 'date', key, options)
   }
@@ -122,6 +129,13 @@ export class Field {
 
   public static checkbox(key, options: any = {}) {
     return Field.field('checkbox', 'checkbox', key, options)
+  }
+
+  public static array(fields: any[] = [], arrayClassName = ''): any {
+    return {
+      fieldArrayClassName: arrayClassName ? arrayClassName : null,
+      fieldArray: fields,
+    }
   }
 
   public static group(fields: any[] = [], groupClassName = ''): any {

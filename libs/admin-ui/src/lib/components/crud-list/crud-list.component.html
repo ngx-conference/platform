@@ -1,4 +1,4 @@
-<ui-page-title [title]="title" [icon]="icon">
+<ui-page-title [title]="title" [icon]="icon" *ngIf="title">
   <button mat-fab class="action-button">
     <mat-icon aria-label="Add new Talk" (click)="openModal()">add</mat-icon>
   </button>
@@ -6,31 +6,14 @@
 
 <div class="grid-container">
   <mat-grid-list cols="3">
+    <mat-grid-tile *ngIf="loading" [colspan]="3">
+      <ui-loading></ui-loading>
+    </mat-grid-tile>
     <mat-grid-tile *ngFor="let item of items" [colspan]="1" [rowspan]="1">
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            {{item[displayField]}}
-            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item (click)="delete(item)">
-                <mat-icon>delete</mat-icon>
-                Remove
-              </button>
-            </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p>{{ item.description }}</p>
-        </mat-card-content>
-        <mat-dialog-actions>
-          <button mat-raised-button (click)="openModal(item)" class="edit-button">
-            <mat-icon>edit</mat-icon> Edit
-          </button>
-        </mat-dialog-actions>
-      </mat-card>
+      <ui-crud-icon *ngIf="iconComponent"
+                    (action)="handleAction($event)"
+                    [data]="item"
+                    [component]="iconComponent"></ui-crud-icon>
     </mat-grid-tile>
   </mat-grid-list>
 </div>

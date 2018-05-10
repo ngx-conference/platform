@@ -202,34 +202,6 @@
         }
       }
     },
-    "admin-dashboard": {
-      "root": "libs/admin-dashboard",
-      "sourceRoot": "libs/admin-dashboard/src",
-      "projectType": "library",
-      "prefix": "dashboard",
-      "architect": {
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "libs/admin-dashboard/src/test.ts",
-            "tsConfig": "libs/admin-dashboard/tsconfig.spec.json",
-            "karmaConfig": "libs/admin-dashboard/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/admin-dashboard/tsconfig.lib.json",
-              "libs/admin-dashboard/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
     "admin-core": {
       "root": "libs/admin-core",
       "sourceRoot": "libs/admin-core/src",
@@ -258,90 +230,6 @@
         }
       }
     },
-    "admin-speakers": {
-      "root": "libs/admin-speakers",
-      "sourceRoot": "libs/admin-speakers/src",
-      "projectType": "library",
-      "prefix": "speakers",
-      "architect": {
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "libs/admin-speakers/src/test.ts",
-            "tsConfig": "libs/admin-speakers/tsconfig.spec.json",
-            "karmaConfig": "libs/admin-speakers/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/admin-speakers/tsconfig.lib.json",
-              "libs/admin-speakers/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
-    "admin-sponsors": {
-      "root": "libs/admin-sponsors",
-      "sourceRoot": "libs/admin-sponsors/src",
-      "projectType": "library",
-      "prefix": "sponsors",
-      "architect": {
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "libs/admin-sponsors/src/test.ts",
-            "tsConfig": "libs/admin-sponsors/tsconfig.spec.json",
-            "karmaConfig": "libs/admin-sponsors/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/admin-sponsors/tsconfig.lib.json",
-              "libs/admin-sponsors/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
-    "admin-talks": {
-      "root": "libs/admin-talks",
-      "sourceRoot": "libs/admin-talks/src",
-      "projectType": "library",
-      "prefix": "talks",
-      "architect": {
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "libs/admin-talks/src/test.ts",
-            "tsConfig": "libs/admin-talks/tsconfig.spec.json",
-            "karmaConfig": "libs/admin-talks/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/admin-talks/tsconfig.lib.json",
-              "libs/admin-talks/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
     "admin-auth": {
       "root": "libs/admin-auth",
       "sourceRoot": "libs/admin-auth/src",
@@ -362,6 +250,34 @@
             "tsConfig": [
               "libs/admin-auth/tsconfig.lib.json",
               "libs/admin-auth/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "admin-conference": {
+      "root": "libs/admin-conference",
+      "sourceRoot": "libs/admin-conference/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/admin-conference/src/test.ts",
+            "tsConfig": "libs/admin-conference/tsconfig.spec.json",
+            "karmaConfig": "libs/admin-conference/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/admin-conference/tsconfig.lib.json",
+              "libs/admin-conference/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
