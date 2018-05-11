@@ -36,6 +36,9 @@
       ],
       "@ngx-conference/admin-conference": [
         "libs/admin-conference/src/index.ts"
+      ],
+      "@ngx-conference/admin-system": [
+        "libs/admin-system/src/index.ts"
       ]
     }
   },

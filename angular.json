@@ -285,6 +285,34 @@
           }
         }
       }
+    },
+    "admin-system": {
+      "root": "libs/admin-system",
+      "sourceRoot": "libs/admin-system/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/admin-system/src/test.ts",
+            "tsConfig": "libs/admin-system/tsconfig.spec.json",
+            "karmaConfig": "libs/admin-system/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/admin-system/tsconfig.lib.json",
+              "libs/admin-system/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

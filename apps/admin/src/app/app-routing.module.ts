@@ -1,7 +1,8 @@
 import { RouterModule, Routes } from '@angular/router'
 import {
-  AuthModuleRoutes,
+  AdminAuthRoutes,
   IsActiveGuard,
+  IsAdminGuard,
   LoggedInGuard,
   ProfileResolver,
 } from '@ngx-conference/admin-auth'
@@ -24,11 +25,21 @@ const routes: Routes = [
         path: 'conferences',
         loadChildren: '@ngx-conference/admin-conference#AdminConferenceModule',
       },
+      {
+        path: '',
+        canActivate: [IsAdminGuard],
+        children: [
+          {
+            path: 'system',
+            loadChildren: '@ngx-conference/admin-system#AdminSystemModule',
+          },
+        ],
+      },
     ],
   },
   {
     path: '',
-    children: [...AuthModuleRoutes, ...AdminCoreRoutes],
+    children: [...AdminAuthRoutes, ...AdminCoreRoutes],
   },
   {
     path: '**',
