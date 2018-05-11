@@ -24,8 +24,6 @@ export class ImageUploadComponent {
   // State for CSS toggling
   isHovering: boolean
 
-  private crud: FirebaseCrudService
-
   constructor(private storage: AngularFireStorage) {}
 
   toggleHover(event: boolean) {
