@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core'
 import { AngularFirestore } from 'angularfire2/firestore'
+import { AngularFireStorage } from 'angularfire2/storage'
 
 import { FirebaseCrudService } from '@ngx-conference/admin-api'
 import { Field, WizardStep, Wizard } from '@ngx-conference/admin-ui'
@@ -23,7 +24,7 @@ export class ConferenceService {
 
   public fb: FirebaseCrudService
 
-  constructor(public db: AngularFirestore) {
+  constructor(public db: AngularFirestore, public storage: AngularFireStorage) {
     this.fb = new FirebaseCrudService(db, CrudConference.collectionId)
 
     this.wizard = new Wizard()
@@ -66,6 +67,14 @@ export class ConferenceService {
       return this.handlers[type](payload)
     }
     return console.log('handleAction unknown:', { type, payload })
+  }
+
+  public deleteFile(file) {
+    this.storage.ref(file.path).delete()
+      .subscribe(() => {
+        this.db.doc(`Images/${file.id}`).delete()
+          .then(() => console.log('file deleted'))
+      })
   }
 
 }

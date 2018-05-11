@@ -1,0 +1,30 @@
+<div class="dropzone"
+     imageDrop
+     (hovered)="toggleHover($event)"
+     (dropped)="startUpload($event)"
+     [class.hovering]="isHovering">
+
+  <div>
+    <input hidden class="file-input" #imgFileInput  type="file" (change)="startUpload($event.target.files)">
+    <button type="button" mat-raised-button color="accent" (click)="imgFileInput.click()">
+      <mat-icon>image</mat-icon>
+      Select image
+    </button>
+  </div>
+
+</div>
+<div *ngIf="percentage | async as pct" style="display: none">
+  <progress class="progress is-info"
+            [value]="pct"
+            max="100">
+  </progress>
+  {{ pct | number }}%
+</div>
+<div *ngIf="(snapshot | async) as snap"  style="display: none">
+  {{ snap.bytesTransferred | fileSize }} of {{ snap.totalBytes | fileSize }}
+
+  <hr>
+  <button (click)="task.pause()" mat-button [disabled]="!isActive(snap)">Pause</button>
+  <button (click)="task.cancel()" mat-button [disabled]="!isActive(snap)">Cancel</button>
+  <button (click)="task.resume()" mat-button [disabled]="!(snap?.state === 'paused')">Resume</button>
+</div>

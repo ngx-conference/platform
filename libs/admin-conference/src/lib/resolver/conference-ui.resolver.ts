@@ -42,6 +42,11 @@ export class ConferenceUiResolver implements Resolve<any> {
                 icon: 'present_to_all',
               },
               {
+                label: 'Images',
+                link: ['/conferences', res.id, 'images'],
+                icon: 'images',
+              },
+              {
                 label: 'Settings',
                 link: ['/conferences', res.id, 'settings'],
                 icon: 'settings',

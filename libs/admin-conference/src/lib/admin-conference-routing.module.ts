@@ -1,6 +1,5 @@
 import { ModuleWithProviders } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import { ConferenceSettingsComponent } from '@ngx-conference/admin-conference/src/lib/containers/conference-settings/conference-settings.component'
 
 import { CrudComponent, LayoutBasicComponent, LayoutComponent } from '@ngx-conference/admin-ui'
 
@@ -9,7 +8,9 @@ import { ConferenceUiResolver } from './resolver/conference-ui.resolver'
 import { DbResolver } from './resolver/db.resolver'
 
 import { ConferenceDashboardComponent } from './containers/conference-dashboard/conference-dashboard.component'
+import { ConferenceImagesComponent } from './containers/conference-images/conference-images.component'
 import { ConferenceIndexComponent } from './containers/conference-index/conference-index.component'
+import { ConferenceSettingsComponent } from './containers/conference-settings/conference-settings.component'
 import { ConferenceWizardComponent } from './containers/conference-wizard/conference-wizard.component'
 
 import { CrudSpeaker } from './models/crud-speaker'
@@ -75,6 +76,10 @@ const routes: Routes = [
             data: {
               crud: CrudTalk,
             },
+          },
+          {
+            path: 'images',
+            component: ConferenceImagesComponent,
           },
           {
             path: 'settings',
