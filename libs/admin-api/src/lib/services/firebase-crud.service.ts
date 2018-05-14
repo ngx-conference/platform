@@ -6,9 +6,6 @@ import { fromPromise } from 'rxjs/internal/observable/fromPromise'
 import { map } from 'rxjs/internal/operators'
 import * as firebase from 'firebase'
 
-@Injectable({
-  providedIn: 'root',
-})
 export class FirebaseCrudService {
   constructor(
     public db: AngularFirestore,
