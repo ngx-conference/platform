@@ -36,20 +36,26 @@ const exportedComponents = [
   WizardComponent,
 ]
 
+const entryComponents = [
+  CrudModalComponent
+]
+
 const internalComponents = [
   FooterComponent,
   HeaderComponent,
 ]
 
 const exportedModules = [
-  FormsModule,
   AdminUiMaterialModule,
+  CommonModule,
+  FormsModule,
+  RouterModule,
 ]
 
 @NgModule({
-  imports: [CommonModule, RouterModule, ...exportedModules],
+  imports: [...exportedModules],
   declarations: [...exportedComponents, ...internalComponents],
   exports: [...exportedComponents, ...exportedModules],
-  entryComponents: [CrudModalComponent]
+  entryComponents: [...entryComponents]
 })
 export class AdminUiModule {}

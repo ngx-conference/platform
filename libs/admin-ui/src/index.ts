@@ -1,6 +1,3 @@
-/*
-* Public API Surface of mylib
-*/
 export * from './lib/forms/helpers/buttons'
 export * from './lib/forms/helpers/fields'
 export * from './lib/components/crud/crud.component'

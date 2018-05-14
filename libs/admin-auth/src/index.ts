@@ -1,6 +1,3 @@
-/*
-* Public API Surface of mylib
-*/
 export * from './lib/guards/is-active.guard'
 export * from './lib/guards/is-admin.guard'
 export * from './lib/guards/logged-in.guard'

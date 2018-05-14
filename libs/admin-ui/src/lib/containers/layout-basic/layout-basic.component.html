@@ -22,7 +22,6 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <ui-header [isHandset]="isHandset"
-               [appTitle]="ui.appTitle || ''"
                [user]="ui.user$ | async"
                (action)="handleAction($event)">
     </ui-header>

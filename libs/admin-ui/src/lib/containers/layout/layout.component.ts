@@ -12,7 +12,7 @@ import { map } from 'rxjs/operators'
   styleUrls: ['./layout.component.scss'],
 })
 export class LayoutComponent {
-  private ui: any
+  public ui: any
   @ViewChild('drawer') drawer: MatDrawer
   public isHandset: Observable<BreakpointState> = this.breakpointObserver.observe(Breakpoints.Handset)
 

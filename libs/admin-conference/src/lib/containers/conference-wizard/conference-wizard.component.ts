@@ -34,7 +34,7 @@ const slugify = (str): string => {
     <ui-wizard [form]="form"
                [(model)]="model"
                [wizard]="wizard"
-               (modelChange)="modelChange($event)"
+               (modelChange)="modelChange()"
                (action)="service.handleAction($event)">
     </ui-wizard>
   `,

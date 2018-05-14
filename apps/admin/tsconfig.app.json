@@ -7,7 +7,6 @@
   },
   "include": [
     "./src/**/*.ts",
-    "../../libs/admin-auth/src/lib/admin-auth.module.ts",
     "../../libs/admin-conference/src/lib/admin-conference.module.ts"
   ],
   "exclude": [

@@ -6,10 +6,6 @@ import { AuthService } from '../../services/auth.service'
   template: `
     <mat-toolbar color="secondary">Request access to ngx-conference</mat-toolbar>
     <div class="block">
-      <div *ngIf="error">
-        <strong>An error occurred.</strong>
-        {{error}}
-      </div>
       <div *ngIf="user; else loading">
         <div *ngIf="user.requestAccess; else requestButton">
           <button mat-flat-button color="accent">

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs'
   templateUrl: './crud-modal.component.html',
 })
 export class CrudModalComponent {
-  private form = new FormGroup({})
+  public form = new FormGroup({})
 
   public saveAction: (data) => Observable<any>
   public fields: any[] = []
