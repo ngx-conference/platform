@@ -1,24 +1,26 @@
 import { Injectable } from '@angular/core'
 import { CanActivate, Router } from '@angular/router'
+import { Store } from '@ngxs/store'
+import { tap } from 'rxjs/operators'
 import { AuthService } from '../services/auth.service'
-import 'rxjs/add/operator/take'
-import 'rxjs/add/operator/map'
-import 'rxjs/add/operator/do'
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class IsActiveGuard implements CanActivate {
-  constructor(private auth: AuthService, private router: Router) {}
+  constructor(
+    private store: Store,
+    private auth: AuthService,
+    private router: Router,
+  ) {}
 
   canActivate() {
-    return this.auth.user$
-      .take(1)
-      .map(profile => profile && !!profile.active)
-      .do(active => {
-        if (!active) {
-          return this.router.navigate([`/request-access`])
+    return this.store.select(state => state.auth.user.active).pipe(
+      tap(isActive => {
+        if (!isActive) {
+          this.router.navigate([`/request-access`])
         }
-      })
+      }),
+    )
   }
 }

@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core'
-import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore'
 
-import { firebase } from '@firebase/app';
+import { firebase } from '@firebase/app'
+import { LoginSuccess, LogoutSuccess } from '@ngx-conference/admin-auth/src/lib/state/auth.actions'
+import { SetProfile, UiService } from '@ngx-conference/admin-ui'
+import { Store } from '@ngxs/store'
 
 import { AngularFireAuth } from 'angularfire2/auth'
+import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore'
 
 import { Observable, of } from 'rxjs'
-import { fromPromise } from 'rxjs/internal/observable/fromPromise'
-import { switchMap } from 'rxjs/internal/operators'
-import { UiService } from '@ngx-conference/admin-ui'
-// import GoogleAuthProvider = firebase.auth.GoogleAuthProvider
+import { fromPromise } from 'rxjs/observable/fromPromise'
+import { switchMap } from 'rxjs/operators'
 
 export interface FireUser {
   id: string
@@ -37,7 +38,7 @@ const defaultProfile = user => {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   private readonly collection = 'Users'
@@ -54,10 +55,15 @@ export class AuthService {
     private afAuth: AngularFireAuth,
     private db: AngularFirestore,
     private ui: UiService,
+    private store: Store,
   ) {
     this._observeState()
-    // this.afAuth.auth.app
-    this.ui.user$ = this.user$
+    this.user$.subscribe((user: any) => {
+      // console.log('user', user)
+      // if (user) {
+        this.store.dispatch([new LoginSuccess(user), new SetProfile(user)])
+      // }
+    })
   }
 
   /**
@@ -77,7 +83,7 @@ export class AuthService {
           this._isLoggedIn = false
           return of(null)
         }
-      })
+      }),
     )
   }
 
@@ -116,8 +122,8 @@ export class AuthService {
    * @returns {Promise<void>}
    */
   public loginGithub() {
-    return this._login(new firebase.auth.GithubAuthProvider()).then(credentials =>
-      this._updateProfile(credentials.user)
+    return this._login(new firebase.auth.GithubAuthProvider()).then(
+      credentials => this._updateProfile(credentials.user),
     )
   }
 
@@ -126,8 +132,8 @@ export class AuthService {
    * @returns {Promise<void>}
    */
   public loginGoogle() {
-    return this._login(new firebase.auth.GoogleAuthProvider()).then(credentials =>
-      this._updateProfile(credentials.user)
+    return this._login(new firebase.auth.GoogleAuthProvider()).then(
+      credentials => this._updateProfile(credentials.user),
     )
   }
 
@@ -168,10 +174,16 @@ export class AuthService {
    * @returns {Observable<any>}
    */
   public logout() {
-    return fromPromise(this.afAuth.auth.signOut())
+    return fromPromise(
+      this.afAuth.auth
+        .signOut()
+        .then(() => this.store.dispatch(new LogoutSuccess())),
+    )
   }
 
   public requestAccess(userId: string) {
-    return fromPromise(this._getDocRef(userId).update({ requestAccess: Date.now() }))
+    return fromPromise(
+      this._getDocRef(userId).update({ requestAccess: Date.now() }),
+    )
   }
 }

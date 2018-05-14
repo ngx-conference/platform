@@ -1,7 +1,9 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router'
-import { AuthService } from '../../services/auth.service'
+import { Actions, ofActionDispatched, Store } from '@ngxs/store'
+
 import { URL_REDIRECT } from '../../auth.constants'
+import { Login, LoginSuccess } from '../../state/auth.actions'
 
 @Component({
   selector: 'auth-login',
@@ -24,31 +26,41 @@ import { URL_REDIRECT } from '../../auth.constants'
       </div>
     </div>
   `,
-  styles: [`
+  styles: [
+    `
     .social-login {
       margin: 30px auto;
       width: 250px;
       text-align: center;
     }
-  `]
+  `,
+  ],
 })
-export class AuthLoginComponent {
+export class AuthLoginComponent implements OnInit {
   private readonly redirectUrl: string
   public error = null
 
-  constructor(public auth: AuthService, private route: ActivatedRoute, private router: Router) {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private store: Store,
+    private actions: Actions,
+  ) {
     this.redirectUrl = this.route.snapshot.queryParams['url'] || URL_REDIRECT
   }
 
+  ngOnInit() {
+    this.actions
+      .pipe(ofActionDispatched(LoginSuccess))
+      .subscribe(() => this.redirect())
+  }
+
   redirect() {
+    console.log('redirecting to ', this.redirectUrl)
     return this.router.navigate([this.redirectUrl])
   }
 
   public login(provider) {
-    this.error = false
-    this.auth.login(provider).subscribe(() => this.redirect(), err => {
-      console.log(err)
-      this.error = err.message
-    })
+    this.store.dispatch(new Login(provider))
   }
 }

@@ -1,30 +1,27 @@
 import { Injectable } from '@angular/core'
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router'
+import {
+  ActivatedRouteSnapshot,
+  CanActivate,
+  Router,
+  RouterStateSnapshot,
+} from '@angular/router'
+import { Store } from '@ngxs/store'
 
 import { URL_LOGIN, URL_REDIRECT } from '../auth.constants'
-import { AuthService } from '../services/auth.service'
-import { map, take, tap } from 'rxjs/internal/operators'
+import { AuthState } from '../state/auth.state'
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoggedInGuard implements CanActivate {
-  constructor(private auth: AuthService, private router: Router) {
-  }
+  constructor(private router: Router, private store: Store) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     const redirectUrl = state.url || URL_REDIRECT
+    const loggedIn = this.store.selectSnapshot(AuthState.loggedIn)
 
-    return this.auth.authState$
-      .pipe(
-        take(1),
-        map(authState => !!authState),
-        tap(authenticated => {
-          if (!authenticated) {
-            return this.login(redirectUrl)
-          }
-        }),
-      )
+    console.log('loggedIn', loggedIn)
+    return loggedIn ? loggedIn : this.login(redirectUrl)
   }
 
   login(redirectUrl) {

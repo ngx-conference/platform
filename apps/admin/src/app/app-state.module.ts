@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core'
 
+import { AuthState } from '@ngx-conference/admin-auth'
 import { UiState } from '@ngx-conference/admin-ui'
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin'
 
@@ -11,10 +12,10 @@ import { environment } from '../environments/environment'
 
 @NgModule({
   imports: [
-    NgxsModule.forRoot([UiState]),
+    NgxsModule.forRoot([UiState, AuthState]),
     NgxsLoggerPluginModule.forRoot(),
     NgxsReduxDevtoolsPluginModule.forRoot({ disabled: environment.production }),
-    NgxsStoragePluginModule.forRoot(),
+    NgxsStoragePluginModule.forRoot({ key: ['auth'] }),
   ],
 })
 export class AppStateModule {}

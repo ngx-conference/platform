@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core'
 import { MatDrawer } from '@angular/material'
 import { Router } from '@angular/router'
 import { Select } from '@ngxs/store'
-import { Observable } from 'rxjs/index'
+import { Observable } from 'rxjs'
 
 import { UiState } from '../../state/ui.state'
 
