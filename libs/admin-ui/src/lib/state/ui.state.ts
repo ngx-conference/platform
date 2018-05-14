@@ -24,6 +24,11 @@ const defaultMenuItems = [
     link: '/conferences',
     icon: 'people',
   },
+  {
+    label: 'System',
+    link: '/system',
+    icon: 'computer',
+  },
 ]
 
 @State<UiStateModel>({

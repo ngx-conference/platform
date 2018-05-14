@@ -8,7 +8,9 @@
   "include": [
     "./src/**/*.ts",
     "../../libs/admin-conference/src/lib/admin-conference.module.ts",
-    "../../libs/admin-system/src/lib/admin-system.module.ts"
+    "../../libs/admin-system/src/lib/admin-system.module.ts",
+    "../../libs/admin-system/src/lib/modules/export-import/system-export-import.module.ts",
+    "../../libs/admin-system/src/lib/modules/user/system-user.module.ts"
   ],
   "exclude": [
     "src/test.ts",

@@ -22,6 +22,8 @@ export interface FireUser {
   requestAccess?: number
 }
 
+export interface AuthUser extends FireUser {}
+
 const defaultProfile = user => {
   const providerData = user.providerData[0]
 

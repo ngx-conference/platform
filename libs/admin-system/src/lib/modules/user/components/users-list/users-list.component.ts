@@ -4,12 +4,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core'
   selector: 'app-users-list',
   template: `
     <div class="card" *ngIf="items && fields">
-      <div>
-        <h3 class="card-title m-3">
-          <i class="fa fa-fw fa-table"></i>
-          Data
-        </h3>
-      </div>
+      <pre>{{items | json}}</pre>
       <table class="table table-hover mb-0">
         <tr>
           <th>{{ displayField }}</th>
@@ -22,7 +17,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core'
         </tr>
         <tr *ngFor="let item of items">
           <th>
-            <a href="" (click)="edit($event, item)">
+            <a href="" [routerLink]="item.id">
               {{ item[displayField] }}
             </a>
           </th>
@@ -32,8 +27,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core'
             </ng-container>
           </ng-container>
           <td class="text-right p-3">
-            <button class="btn btn-sm btn-outline-danger" (click)="delete(item.id)">
-              <i class="fa fa-trash"></i>
+            <button mat-button color="danger" (click)="delete(item.id)">
+              <mat-icon>delete</mat-icon>
             </button>
           </td>
         </tr>

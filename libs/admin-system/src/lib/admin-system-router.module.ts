@@ -1,10 +1,7 @@
 import { ModuleWithProviders } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 
-import { SystemExportComponent } from './containers/system-export/system-export.component'
-import { SystemImportComponent } from './containers/system-import/system-import.component'
 import { SystemIndexComponent } from './containers/system-index/system-index.component'
-import { UsersIndexComponent } from './containers/users-index/users-index.component'
 
 const routes: Routes = [
   { path: '', redirectTo: 'users', pathMatch: 'full' },
@@ -13,19 +10,12 @@ const routes: Routes = [
     component: SystemIndexComponent,
     children: [
       {
+        path: 'export-import',
+        loadChildren: './modules/export-import/system-export-import.module#SystemExportImportModule'
+      },
+      {
         path: 'users',
-        component: UsersIndexComponent,
-        children: [],
-      },
-      {
-        path: 'export',
-        component: SystemExportComponent,
-        children: [],
-      },
-      {
-        path: 'import',
-        component: SystemImportComponent,
-        children: [],
+        loadChildren: './modules/user/system-user.module#SystemUserModule'
       },
     ],
   },
