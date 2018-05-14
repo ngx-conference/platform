@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-conference-sidebar',
+  selector: 'shared-not-found',
   template: `
     <p>
-      conference-sidebar works!
+      not-found works!
     </p>
   `,
   styles: []
 })
-export class ConferenceSidebarComponent implements OnInit {
+export class NotFoundComponent implements OnInit {
 
   constructor() { }
 

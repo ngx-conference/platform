@@ -1,10 +1,12 @@
 import { RouterModule, Routes } from '@angular/router'
 import {
   AuthModuleRoutes,
+  IsActiveGuard,
   LoggedInGuard,
   ProfileResolver,
 } from '@ngx-conference/admin-auth'
-import { IsActiveGuard } from '@ngx-conference/admin-auth'
+import { AdminCoreRoutes } from '@ngx-conference/admin-core'
+import { LayoutComponent } from '@ngx-conference/admin-ui'
 
 const routes: Routes = [
   {
@@ -14,6 +16,7 @@ const routes: Routes = [
   },
   {
     path: '',
+    component: LayoutComponent,
     canActivate: [LoggedInGuard, IsActiveGuard],
     resolve: { profile: ProfileResolver },
     children: [
@@ -25,7 +28,14 @@ const routes: Routes = [
   },
   {
     path: '',
-    children: [...AuthModuleRoutes],
+    children: [...AuthModuleRoutes, ...AdminCoreRoutes],
+  },
+  {
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: '/not-found',
   },
 ]
-export const AppRoutingModule = RouterModule.forRoot(routes, { paramsInheritanceStrategy: 'always' })
+export const AppRoutingModule = RouterModule.forRoot(routes, {
+  paramsInheritanceStrategy: 'always',
+})

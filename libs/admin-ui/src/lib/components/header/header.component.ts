@@ -8,7 +8,7 @@ import { BreakpointState } from '@angular/cdk/layout'
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  @Input() appTitle: string
+  @Input() title: string
   @Input() user: any
   @Input() isHandset: Observable<BreakpointState>
   @Output() action = new EventEmitter()

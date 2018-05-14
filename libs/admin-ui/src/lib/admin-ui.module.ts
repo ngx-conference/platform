@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { FlexLayoutModule } from '@angular/flex-layout'
 import { RouterModule } from '@angular/router'
 
 import { FormsModule } from './forms/forms.module'
 import { AdminUiMaterialModule } from './admin-ui-material.module'
 
 import { LayoutComponent } from './containers/layout/layout.component'
-import { LayoutBasicComponent } from './containers/layout-basic/layout-basic.component'
 
 import { AvatarComponent } from './components/avatar/avatar.component'
 import { CrudComponent } from './components/crud/crud.component'
 import { CrudIconComponent } from './components/crud-icon/crud-icon.component'
 import { CrudListComponent } from './components/crud-list/crud-list.component'
 import { CrudModalComponent } from './components/crud-modal/crud-modal.component'
-import { FooterComponent } from './components/footer/footer.component'
 import { GridTileComponent } from './components/grid-tile/grid-tile.component'
 import { HeaderComponent } from './components/header/header.component'
 import { LoadingComponent } from './components/loading/loading.component'
@@ -29,7 +28,6 @@ const exportedComponents = [
   CrudModalComponent,
   GridTileComponent,
   LayoutComponent,
-  LayoutBasicComponent,
   LoadingComponent,
   PageComponent,
   PageTitleComponent,
@@ -41,7 +39,6 @@ const entryComponents = [
 ]
 
 const internalComponents = [
-  FooterComponent,
   HeaderComponent,
 ]
 
@@ -50,6 +47,7 @@ const exportedModules = [
   CommonModule,
   FormsModule,
   RouterModule,
+  FlexLayoutModule,
 ]
 
 @NgModule({

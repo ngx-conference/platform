@@ -5,11 +5,11 @@
 </ui-page-title>
 
 <div class="grid-container">
-  <mat-grid-list cols="3">
-    <mat-grid-tile *ngIf="loading" [colspan]="3">
+  <mat-grid-list [cols]="cols">
+    <mat-grid-tile *ngIf="loading" [colspan]="cols">
       <ui-loading></ui-loading>
     </mat-grid-tile>
-    <mat-grid-tile *ngIf="!loading && !items.length" [colspan]="3">
+    <mat-grid-tile *ngIf="!loading && !items.length" [colspan]="cols">
       <mat-toolbar>
         No items found.
       </mat-toolbar>

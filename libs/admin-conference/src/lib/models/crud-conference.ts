@@ -56,6 +56,34 @@ export const ConferenceAddressFields = [
   ]),
 ]
 
+export const menuItems = (id) => ([
+  {
+    label: 'Dashboard',
+    link: ['/conferences', id, 'dashboard'],
+    icon: 'dashboard',
+  },
+  {
+    label: 'Speakers',
+    link: ['/conferences', id, 'speakers'],
+    icon: 'speaker',
+  },
+  {
+    label: 'Sponsors',
+    link: ['/conferences', id, 'sponsors'],
+    icon: 'card_giftcard',
+  },
+  {
+    label: 'Talks',
+    link: ['/conferences', id, 'talks'],
+    icon: 'present_to_all',
+  },
+  {
+    label: 'Settings',
+    link: ['/conferences', id, 'settings'],
+    icon: 'settings',
+  },
+])
+
 export const CrudConference = {
   collectionId: 'Conferences',
   parent: null,

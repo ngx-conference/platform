@@ -6,13 +6,17 @@ import { AdminApiModule } from '@ngx-conference/admin-api'
 import { AdminAuthModule } from '@ngx-conference/admin-auth'
 import { AdminCoreModule } from '@ngx-conference/admin-core'
 
+import { AppStateModule } from './app-state.module'
 import { AppRoutingModule } from './app-routing.module'
+
 import { AppComponent } from './app.component'
 
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+
+    AppStateModule,
 
     AdminApiModule,
     AdminAuthModule,

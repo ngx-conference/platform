@@ -1,10 +1,10 @@
 import { Component, ViewChild } from '@angular/core'
-import { Observable } from 'rxjs/index'
-import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout'
 import { MatDrawer } from '@angular/material'
-import { UiService } from '../../services/ui.service'
-import { ActivatedRoute, Router } from '@angular/router'
-import { map } from 'rxjs/operators'
+import { Router } from '@angular/router'
+import { Select } from '@ngxs/store'
+import { Observable } from 'rxjs/index'
+
+import { UiState } from '../../state/ui.state'
 
 @Component({
   selector: 'ui-layout',
@@ -12,20 +12,11 @@ import { map } from 'rxjs/operators'
   styleUrls: ['./layout.component.scss'],
 })
 export class LayoutComponent {
-  public ui: any
-  @ViewChild('drawer') drawer: MatDrawer
-  public isHandset: Observable<BreakpointState> = this.breakpointObserver.observe(Breakpoints.Handset)
+  @Select(UiState) ui$: Observable<any>
 
-  constructor(
-    private breakpointObserver: BreakpointObserver,
-    public uiService: UiService,
-    private router: Router,
-    private route: ActivatedRoute
-  ) {
-    this.route.data.pipe(
-      map(data => data['ui'])
-    ).subscribe(ui => this.ui = ui)
-  }
+  @ViewChild('drawer') drawer: MatDrawer
+
+  constructor(private router: Router) {}
 
   public handleAction({ type, payload }) {
     switch (type) {

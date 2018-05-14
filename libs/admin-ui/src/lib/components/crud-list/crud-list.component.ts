@@ -1,10 +1,11 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core'
+import { ObservableMedia } from '@angular/flex-layout'
 import { MatDialog } from '@angular/material'
-
-import { CrudModalComponent } from '../crud-modal/crud-modal.component'
 import { FirebaseCrudService } from '@ngx-conference/admin-api'
 import { AngularFirestore } from 'angularfire2/firestore'
-import { Subscription } from 'rxjs/index'
+import { Subscription } from 'rxjs'
+
+import { CrudModalComponent } from '../crud-modal/crud-modal.component'
 
 @Component({
   selector: 'ui-crud-list',
@@ -24,9 +25,22 @@ export class CrudListComponent implements OnInit, OnDestroy {
   public service: FirebaseCrudService
   public items: any[]
   public loading: boolean
+  public cols = 2
   private subscription: Subscription
 
-  constructor(public dialog: MatDialog) {}
+  constructor(
+    public dialog: MatDialog,
+    public observableMedia: ObservableMedia,
+  ) {
+    const breakpoints : { [ size : string ] : number } ={
+        ['xs']: 1,
+        ['sm']: 1,
+        ['md']: 2,
+        ['lg']: 3,
+        ['xl']: 3,
+      };
+    this.observableMedia.subscribe(x => this.cols = breakpoints[x.mqAlias]);
+  }
 
   openModal(item = {}) {
     const modalRef = this.dialog.open(CrudModalComponent)
@@ -35,11 +49,15 @@ export class CrudListComponent implements OnInit, OnDestroy {
     modalInst.fields = this.fields
     modalInst.title = this.title
     modalInst.icon = this.icon
-    modalInst.saveAction = (data) => this.service.upsertItem(data)
+    modalInst.saveAction = data => this.service.upsertItem(data)
   }
 
   ngOnInit() {
-    this.service = new FirebaseCrudService(this.db, this.collectionId, this.parentId)
+    this.service = new FirebaseCrudService(
+      this.db,
+      this.collectionId,
+      this.parentId,
+    )
     this.loadData()
   }
 
@@ -49,20 +67,19 @@ export class CrudListComponent implements OnInit, OnDestroy {
 
   loadData() {
     this.loading = true
-    this.subscription = this.service.getItems()
-      .subscribe(
-        res => {
-          this.loading = false
-          this.items = res
-        },
-        err => {
-          this.loading = false
-          console.error(err)
-        },
-      )
+    this.subscription = this.service.getItems().subscribe(
+      res => {
+        this.loading = false
+        this.items = res
+      },
+      err => {
+        this.loading = false
+        console.error(err)
+      },
+    )
   }
 
-  handleAction({type, payload}) {
+  handleAction({ type, payload }) {
     switch (type) {
       case 'EDIT':
         return this.openModal(payload)

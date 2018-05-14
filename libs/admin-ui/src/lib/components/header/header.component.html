@@ -4,10 +4,10 @@
     aria-label="Toggle sidenav"
     mat-icon-button
     (click)="action.emit({ type: 'TOGGLE_DRAWER' })"
-    *ngIf="(isHandset | async)!.matches">
+    *ngIf="isHandset">
     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
   </button>
-  <span>{{appTitle}}</span>
+  <span>{{title}}</span>
   <span *ngIf="user" class="user-profile">
     <button mat-icon-button class="more-button" [matMenuTriggerFor]="profile" aria-label="Toggle profile">
       <ui-avatar [image]="user.avatar"></ui-avatar>
