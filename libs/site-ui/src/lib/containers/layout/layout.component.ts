@@ -1,18 +1,26 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core'
 import { UiService } from '../../services/ui.service'
 
 @Component({
-  selector: 'app-layout',
   template: `
-    <ui-header [title]="ui.title" [menuItems]="ui.menuItems"></ui-header>
+    <ui-header [title]="ui.title" [items]="ui.items"></ui-header>
     <div class="container">
-      <ng-content></ng-content>
+      <router-outlet></router-outlet>
     </div>
     <ui-footer [copyright]="ui.copyright"></ui-footer>
   `,
 })
-export class LayoutComponent implements OnInit {
-  constructor(public ui: UiService) {}
+export class LayoutComponent implements AfterViewInit {
+  public copyright: string
+  public items: any[]
+  public title: string
 
-  ngOnInit() {}
+  constructor(public ui: UiService, private cd: ChangeDetectorRef) {}
+
+  ngAfterViewInit() {
+    this.copyright = this.ui.copyright
+    this.items = this.ui.items
+    this.title = this.ui.title
+    this.cd.detectChanges()
+  }
 }

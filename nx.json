@@ -36,6 +36,15 @@
     },
     "site-ui": {
       "tags": []
+    },
+    "site-conference": {
+      "tags": []
+    },
+    "site-conference-picker": {
+      "tags": []
+    },
+    "site-api": {
+      "tags": []
     }
   }
 }

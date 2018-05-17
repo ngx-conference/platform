@@ -42,6 +42,15 @@
       ],
       "@ngx-conference/site-ui": [
         "libs/site-ui/src/index.ts"
+      ],
+      "@ngx-conference/site-conference": [
+        "libs/site-conference/src/index.ts"
+      ],
+      "@ngx-conference/site-conference-picker": [
+        "libs/site-conference-picker/src/index.ts"
+      ],
+      "@ngx-conference/site-api": [
+        "libs/site-api/src/index.ts"
       ]
     }
   },

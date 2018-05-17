@@ -4,11 +4,11 @@ import { Injectable } from '@angular/core'
   providedIn: 'root',
 })
 export class UiService {
-  public title = `ngx-conference`
-  public menuItems = [
+  public copyright = `<a href="https://github.com/ngx-conference/platform">ngx-conference</a>`
+  public items = [
     {
       label: 'Home',
-      link: '/',
+      link: '/home',
     },
     {
       label: 'Speakers',
@@ -22,8 +22,16 @@ export class UiService {
       label: 'Sessions',
       link: '/sessions',
     },
+    {
+      label: 'Sponsors',
+      link: '/sponsors',
+    },
   ]
-  public copyright = `<a href="https://github.com/ngx-conference/platform">ngx-conference</a>`
+  public title = `ngx-conference`
 
   constructor() {}
+
+  setTitle(title: string) {
+    this.title = title
+  }
 }

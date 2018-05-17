@@ -10,6 +10,6 @@ import { LayoutComponent } from './containers/layout/layout.component'
 @NgModule({
   imports: [CommonModule, RouterModule],
   declarations: [LayoutComponent, HeaderComponent, FooterComponent],
-  exports: [LayoutComponent],
+  exports: [LayoutComponent, HeaderComponent],
 })
 export class SiteUiModule {}

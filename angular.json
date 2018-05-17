@@ -455,6 +455,90 @@
           }
         }
       }
+    },
+    "site-conference": {
+      "root": "libs/site-conference",
+      "sourceRoot": "libs/site-conference/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/site-conference/src/test.ts",
+            "tsConfig": "libs/site-conference/tsconfig.spec.json",
+            "karmaConfig": "libs/site-conference/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/site-conference/tsconfig.lib.json",
+              "libs/site-conference/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "site-conference-picker": {
+      "root": "libs/site-conference-picker",
+      "sourceRoot": "libs/site-conference-picker/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/site-conference-picker/src/test.ts",
+            "tsConfig": "libs/site-conference-picker/tsconfig.spec.json",
+            "karmaConfig": "libs/site-conference-picker/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/site-conference-picker/tsconfig.lib.json",
+              "libs/site-conference-picker/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "site-api": {
+      "root": "libs/site-api",
+      "sourceRoot": "libs/site-api/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/site-api/src/test.ts",
+            "tsConfig": "libs/site-api/tsconfig.spec.json",
+            "karmaConfig": "libs/site-api/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/site-api/tsconfig.lib.json",
+              "libs/site-api/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

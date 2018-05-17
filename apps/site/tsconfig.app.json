@@ -5,6 +5,11 @@
     "module": "es2015",
     "types": []
   },
+  "include": [
+    "./src/**/*.ts",
+    "../../libs/site-conference/src/lib/site-conference.module.ts",
+    "../../libs/site-conference-picker/src/lib/site-conference-picker.module.ts"
+  ],
   "exclude": [
     "src/test.ts",
     "**/*.spec.ts"
