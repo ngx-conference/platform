@@ -8,23 +8,23 @@ export class UiService {
   public items = [
     {
       label: 'Home',
-      link: '/home',
+      link: 'home',
     },
     {
       label: 'Speakers',
-      link: '/speakers',
+      link: 'speakers',
     },
     {
       label: 'Schedule',
-      link: '/schedule',
+      link: 'schedule',
     },
     {
       label: 'Sessions',
-      link: '/sessions',
+      link: 'sessions',
     },
     {
       label: 'Sponsors',
-      link: '/sponsors',
+      link: 'sponsors',
     },
   ]
   public title = `ngx-conference`

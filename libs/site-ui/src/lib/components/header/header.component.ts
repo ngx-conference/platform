@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core'
   selector: 'ui-header',
   template: `
     <nav class="navbar navbar-dark bg-dark mb-5 p-3">
-      <a class="navbar-brand" routerLink="/picker">{{title}}</a>
+      <a class="navbar-brand" routerLink="/">{{title}}</a>
       <div class="navbar-expand mr-auto">
         <div class="navbar-nav">
           <a class="nav-item nav-link" *ngFor="let item of items"

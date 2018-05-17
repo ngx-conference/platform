@@ -5,6 +5,10 @@ import { LayoutComponent } from '@ngx-conference/site-ui'
 const routes: Routes = [
   {
     path: '',
+    loadChildren: '@ngx-conference/site-conference-picker#SiteConferencePickerModule',
+  },
+  {
+    path: ':id',
     component: LayoutComponent,
     children: [
       {
@@ -12,10 +16,6 @@ const routes: Routes = [
         loadChildren: '@ngx-conference/site-conference#SiteConferenceModule',
       },
     ],
-  },
-  {
-    path: 'picker',
-    loadChildren: '@ngx-conference/site-conference-picker#SiteConferencePickerModule',
   },
 ]
 export const AppRoutingModule = RouterModule.forRoot(routes, {

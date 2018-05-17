@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { Resolve } from '@angular/router'
+import { ActivatedRouteSnapshot, Resolve } from '@angular/router'
 import { take } from 'rxjs/operators'
 import { ConferenceService } from '../services/conference.service'
 
@@ -9,7 +9,7 @@ import { ConferenceService } from '../services/conference.service'
 export class SponsorsResolver implements Resolve<any> {
   constructor(public service: ConferenceService) {}
 
-  resolve() {
-    return this.service.getSponsors().pipe(take(1))
+  resolve(route: ActivatedRouteSnapshot) {
+    return this.service.getSponsors(route.paramMap.get('id')).pipe(take(1))
   }
 }

@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core'
+import { Component, AfterViewInit, ChangeDetectorRef } from '@angular/core'
 import { UiService } from '../../services/ui.service'
 
 @Component({

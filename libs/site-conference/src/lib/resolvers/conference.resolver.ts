@@ -1,20 +1,17 @@
 import { Injectable } from '@angular/core'
-import { Resolve, Router } from '@angular/router'
+import { ActivatedRouteSnapshot, Resolve } from '@angular/router'
+import { take } from 'rxjs/operators'
 import { ConferenceService } from '../services/conference.service'
-import { of } from 'rxjs'
 
 @Injectable({
   providedIn: 'root',
 })
 export class ConferenceResolver implements Resolve<any> {
-  constructor(public service: ConferenceService, private router: Router) {}
+  constructor(public service: ConferenceService) {}
 
-  resolve() {
-    if (this.service.conference) {
-      return of(this.service.conference)
-    } else {
-      this.router.navigate(['/picker'])
-      return of(false)
-    }
+  resolve(route: ActivatedRouteSnapshot) {
+    const conferenceId = route.paramMap.get('id')
+
+    return this.service.getConference(conferenceId).pipe(take(1))
   }
 }
