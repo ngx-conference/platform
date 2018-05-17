@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core'
 
 @Component({
-  selector: 'lib-icon-talk',
+  selector: 'lib-icon-session',
   template: `
     <ui-grid-tile [data]="data" [buttons]="buttons" (action)="action.emit($event)">
       <h5>{{data.title}}</h5>
@@ -9,7 +9,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core'
     </ui-grid-tile>
   `,
 })
-export class IconTalkComponent {
+export class IconSessionComponent {
   @Input() public data
   @Output() public action = new EventEmitter()
   public buttons = [

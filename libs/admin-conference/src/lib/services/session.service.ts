@@ -4,16 +4,16 @@ import { AngularFirestore } from 'angularfire2/firestore'
 import { FirebaseCrudService } from '@ngx-conference/admin-api'
 import { Field } from '@ngx-conference/admin-ui'
 
-import { IconTalkComponent } from '../components/icon-talk/icon-talk.component'
+import { IconSessionComponent } from '../components/icon-session/icon-session.component'
 
 @Injectable({
   providedIn: 'root'
 })
-export class TalkService {
-  public collectionId = 'Talks'
+export class SessionService {
+  public collectionId = 'Sessions'
   public displayField = 'title'
   public icon = 'present_to_all'
-  public iconComponent = IconTalkComponent
+  public iconComponent = IconSessionComponent
   public title = this.collectionId
 
   public fb: FirebaseCrudService
@@ -31,6 +31,7 @@ export class TalkService {
     Field.select('type', {
       placeholder: 'Type',
       required: true,
+      defaultValue: 'presentation',
       options: [{
         value: 'generic',
         label: 'Generic',
@@ -39,7 +40,7 @@ export class TalkService {
         label: 'Presentation',
       }, {
         value: 'sponsor',
-        label: 'Sponsor Talk',
+        label: 'Sponsor Session',
       }, {
         value: 'workshop',
         label: 'Workshop',

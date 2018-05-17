@@ -26,9 +26,9 @@ export class ConferenceDashboardComponent implements OnInit, OnDestroy {
     rows: 1,
     count: 0,
   }
-  talks = {
-    title: 'Talks',
-    link: '/talks',
+  sessions = {
+    title: 'Sessions',
+    link: '/sessions',
     cols: 1,
     rows: 1,
     count: 0,
@@ -42,7 +42,7 @@ export class ConferenceDashboardComponent implements OnInit, OnDestroy {
   }
 
   get cards() {
-    return [this.speakers, this.sponsors, this.talks, this.schedule]
+    return [this.speakers, this.sponsors, this.sessions, this.schedule]
   }
 
   private subs: Subscription[]
@@ -68,7 +68,7 @@ export class ConferenceDashboardComponent implements OnInit, OnDestroy {
     this.subs = [
       fb.count('Speakers').subscribe(res => this.speakers.count = res),
       fb.count('Sponsors').subscribe(res => this.sponsors.count = res),
-      fb.count('Talks').subscribe(res => this.talks.count = res),
+      fb.count('Sessions').subscribe(res => this.sessions.count = res),
     ]
   }
 

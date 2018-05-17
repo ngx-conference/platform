@@ -1,13 +1,13 @@
 import { Field } from '@ngx-conference/admin-ui'
 
-import { IconTalkComponent } from '../components/icon-talk/icon-talk.component'
+import { IconSessionComponent } from '../components/icon-session/icon-session.component'
 
-export const CrudTalk = {
-  collectionId: 'Talks',
+export const CrudSession = {
+  collectionId: 'Sessions',
   parent: 'conference',
   icon: 'present_to_all',
-  iconComponent: IconTalkComponent,
-  title: 'Talks',
+  iconComponent: IconSessionComponent,
+  title: 'Sessions',
   fields: [
     Field.input('title', {
       placeholder: 'Title',
@@ -25,7 +25,7 @@ export const CrudTalk = {
         label: 'Presentation',
       }, {
         value: 'sponsor',
-        label: 'Sponsor Talk',
+        label: 'Sponsor Session',
       }, {
         value: 'workshop',
         label: 'Workshop',

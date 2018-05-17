@@ -1,4 +1,5 @@
 import { AngularFirestore } from 'angularfire2/firestore'
+import * as firebase from 'firebase'
 import { Observable } from 'rxjs'
 
 import { fromPromise } from 'rxjs/internal/observable/fromPromise'
@@ -96,7 +97,8 @@ export class FirebaseCrudService {
         .collection(this.parentCollection)
         .doc(id)
         .collection(relation)
-        .add(item)
+        .doc(item.id)
+        .set(item)
         .then(() => item),
     )
   }

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IconTalkComponent } from './icon-talk.component';
+import { IconSessionComponent } from './icon-session.component';
 
-describe('IconTalkComponent', () => {
-  let component: IconTalkComponent;
-  let fixture: ComponentFixture<IconTalkComponent>;
+describe('IconSessionComponent', () => {
+  let component: IconSessionComponent;
+  let fixture: ComponentFixture<IconSessionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IconTalkComponent ]
+      declarations: [ IconSessionComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IconTalkComponent);
+    fixture = TestBed.createComponent(IconSessionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

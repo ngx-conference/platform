@@ -15,7 +15,7 @@ import { ConferenceWizardComponent } from './containers/conference-wizard/confer
 
 import { CrudSpeaker } from './models/crud-speaker'
 import { CrudSponsor } from './models/crud-sponsor'
-import { CrudTalk } from './models/crud-talk'
+import { CrudSession } from './models/crud-session'
 
 const routes: Routes = [
   {
@@ -64,10 +64,10 @@ const routes: Routes = [
             },
           },
           {
-            path: 'talks',
+            path: 'sessions',
             component: CrudComponent,
             data: {
-              crud: CrudTalk,
+              crud: CrudSession,
             },
           },
           {

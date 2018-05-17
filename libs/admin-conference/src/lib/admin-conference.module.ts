@@ -4,7 +4,7 @@ import { AdminCoreModule } from '@ngx-conference/admin-core'
 
 import { AdminConferenceRoutingModule } from './admin-conference-routing.module'
 
-import { IconTalkComponent } from './components/icon-talk/icon-talk.component'
+import { IconSessionComponent } from './components/icon-session/icon-session.component'
 import { IconSponsorComponent } from './components/icon-sponsor/icon-sponsor.component'
 import { IconSpeakerComponent } from './components/icon-speaker/icon-speaker.component'
 import { ImageUploadComponent } from './components/image-upload/image-upload.component'
@@ -32,7 +32,7 @@ import { FileSizePipe } from './pipes/file-size.pipe'
     ConferenceWizardComponent,
     IconSpeakerComponent,
     IconSponsorComponent,
-    IconTalkComponent,
+    IconSessionComponent,
     ConferenceImagesComponent,
     ImageUploadComponent,
     ImageDropDirective,
@@ -41,7 +41,7 @@ import { FileSizePipe } from './pipes/file-size.pipe'
   entryComponents: [
     IconSpeakerComponent,
     IconSponsorComponent,
-    IconTalkComponent,
+    IconSessionComponent,
   ],
 })
 export class AdminConferenceModule {

@@ -37,8 +37,8 @@ export class ConferenceUiResolver implements Resolve<any> {
                 icon: 'card_giftcard',
               },
               {
-                label: 'Talks',
-                link: ['/conferences', res.id, 'talks'],
+                label: 'Sessions',
+                link: ['/conferences', res.id, 'sessions'],
                 icon: 'present_to_all',
               },
               {

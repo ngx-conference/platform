@@ -1,9 +1,9 @@
 import { Field } from '@ngx-conference/admin-ui'
-import { IconTalkComponent } from '../components/icon-talk/icon-talk.component'
+import { IconSessionComponent } from '../components/icon-session/icon-session.component'
 
 import { CrudSpeaker } from './crud-speaker'
 import { CrudSponsor } from './crud-sponsor'
-import { CrudTalk } from './crud-talk'
+import { CrudSession } from './crud-session'
 
 export const ConferenceIdFields = [
   Field.input('id', {
@@ -73,8 +73,8 @@ export const menuItems = (id) => ([
     icon: 'card_giftcard',
   },
   {
-    label: 'Talks',
-    link: ['/conferences', id, 'talks'],
+    label: 'Sessions',
+    link: ['/conferences', id, 'sessions'],
     icon: 'present_to_all',
   },
   {
@@ -92,9 +92,9 @@ export const menuItems = (id) => ([
 export const CrudConference = {
   collectionId: 'Conferences',
   parent: null,
-  children: [CrudSpeaker, CrudSponsor, CrudTalk ],
+  children: [CrudSpeaker, CrudSponsor, CrudSession ],
   icon: 'people',
-  iconComponent: IconTalkComponent,
+  iconComponent: IconSessionComponent,
   title: 'Conferences',
   fields: [
     Field.template('<h3>General information</h3>'),
