@@ -19,6 +19,7 @@ export class CrudListComponent implements OnInit, OnDestroy {
   @Input() collectionId: string
   @Input() displayField: string
   @Input() parentId: string
+  @Input() parentCollection: string
   @Input() fields: any[]
   @Input() db: AngularFirestore
 
@@ -49,13 +50,14 @@ export class CrudListComponent implements OnInit, OnDestroy {
     modalInst.fields = this.fields
     modalInst.title = this.title
     modalInst.icon = this.icon
-    modalInst.saveAction = data => this.service.upsertItem(data)
+    modalInst.saveAction = data => this.service.upsertItemRelation(this.parentId, this.collectionId, data)
   }
 
   ngOnInit() {
     this.service = new FirebaseCrudService(
       this.db,
       this.collectionId,
+      this.parentCollection,
       this.parentId,
     )
     this.loadData()
@@ -67,7 +69,7 @@ export class CrudListComponent implements OnInit, OnDestroy {
 
   loadData() {
     this.loading = true
-    this.subscription = this.service.getItems().subscribe(
+    this.subscription = this.service.getRelatedItems(this.collectionId).subscribe(
       res => {
         this.loading = false
         this.items = res

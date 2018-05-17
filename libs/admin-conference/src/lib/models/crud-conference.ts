@@ -78,6 +78,11 @@ export const menuItems = (id) => ([
     icon: 'present_to_all',
   },
   {
+    label: 'Images',
+    link: ['/conferences', id, 'images'],
+    icon: 'images',
+  },
+  {
     label: 'Settings',
     link: ['/conferences', id, 'settings'],
     icon: 'settings',

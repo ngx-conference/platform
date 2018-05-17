@@ -15,7 +15,7 @@ import { Subscription } from 'rxjs'
           <ui-loading></ui-loading>
         </mat-grid-tile>
         <mat-grid-tile *ngIf="!loading" [colspan]="1">
-          <ui-image-upload [parentId]="conference.id" [crud]="crud"></ui-image-upload>
+          <ui-image-upload [parentId]="conference.id" parentCollection="Conferences"  [crud]="crud"></ui-image-upload>
         </mat-grid-tile>
         <mat-grid-tile *ngFor="let image of images" [colspan]="1" [rowspan]="1">
           <ui-grid-tile [data]="image" (action)="handleAction($event)" [buttons]="buttons">
@@ -58,7 +58,7 @@ export class ConferenceImagesComponent implements OnInit, OnDestroy {
       .subscribe(
         data => {
           this.conference = data.conference
-          this.crud = new FirebaseCrudService(this.service.db, 'Images', this.conference.id)
+          this.crud = new FirebaseCrudService(this.service.db, 'Images', 'Conferences', this.conference.id)
           this.getImages()
         }
       )
@@ -71,7 +71,7 @@ export class ConferenceImagesComponent implements OnInit, OnDestroy {
 
   getImages() {
     this.loading = true
-    this.sub = this.crud.getItems()
+    this.sub = this.crud.getRelatedItems('Images')
       .subscribe(images => {
         this.loading = false
         this.images = images

@@ -13,7 +13,7 @@ export class ConferenceResolver implements Resolve<any> {
 
   resolve(route: ActivatedRouteSnapshot) {
     return this.service.fb.getItem(route.paramMap.get('id')).pipe(
-      map(res => Object.assign({}, res)),
+      map(res => Object.assign({}, res, { collection: 'Conferences' })),
       take(1)
     )
   }

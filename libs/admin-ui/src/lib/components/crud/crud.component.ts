@@ -10,6 +10,7 @@ import { AngularFirestore } from 'angularfire2/firestore'
                   [icon]="crud.icon"
                   [iconComponent]="crud.iconComponent"
                   [collectionId]="crud.collectionId"
+                  [parentCollection]="parent.collection"
                   [parentId]="parent.id"
                   [fields]="crud.fields">
     </ui-crud-list>

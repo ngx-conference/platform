@@ -11,6 +11,7 @@ import { tap } from 'rxjs/operators'
 })
 export class ImageUploadComponent {
   @Input() crud: FirebaseCrudService
+  @Input() parentCollection: string
   @Input() parentId: string
 
   // Main task
@@ -65,7 +66,7 @@ export class ImageUploadComponent {
                 url,
                 size: snap.totalBytes,
               })
-              return this.crud.addItem(imageDoc)
+              return this.crud.addItemRelation(this.parentId, 'Images', imageDoc)
             })
         }
       }),
