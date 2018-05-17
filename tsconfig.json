@@ -39,6 +39,9 @@
       ],
       "@ngx-conference/admin-system": [
         "libs/admin-system/src/index.ts"
+      ],
+      "@ngx-conference/site-ui": [
+        "libs/site-ui/src/index.ts"
       ]
     }
   },

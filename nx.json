@@ -27,6 +27,15 @@
     },
     "admin-system": {
       "tags": []
+    },
+    "site": {
+      "tags": []
+    },
+    "site-e2e": {
+      "tags": []
+    },
+    "site-ui": {
+      "tags": []
     }
   }
 }
