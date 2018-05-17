@@ -1,5 +1,5 @@
 import { BaseModel } from './base.model'
-import { Talk } from './talk.model'
+import { Session } from './talk.model'
 
 export class Speaker extends BaseModel {
   name: string
@@ -9,5 +9,5 @@ export class Speaker extends BaseModel {
   bio?: string
   homepage?: string
   twitter?: string
-  talks?: Talk[]
+  talks?: Session[]
 }

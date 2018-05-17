@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core'
 import { AngularFirestore } from 'angularfire2/firestore'
 
 const PATH_CONFERENCES = 'Conferences'
-const PATH_SESSIONS = 'Talks'
-const PATH_SCHEDULE = 'Talks'
+const PATH_SESSIONS = 'Sessions'
+const PATH_SCHEDULE = 'Sessions'
 const PATH_SPEAKERS = 'Speakers'
 const PATH_SPONSORS = 'Sponsors'
 

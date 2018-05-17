@@ -14,7 +14,7 @@ export class ExportImportService {
       'Images',
       'Speakers',
       'Sponsors',
-      'Talks',
+      'Sessions',
       'Users',
     ]
 

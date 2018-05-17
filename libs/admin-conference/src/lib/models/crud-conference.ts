@@ -63,6 +63,11 @@ export const menuItems = (id) => ([
     icon: 'dashboard',
   },
   {
+    label: 'Sessions',
+    link: ['/conferences', id, 'sessions'],
+    icon: 'present_to_all',
+  },
+  {
     label: 'Speakers',
     link: ['/conferences', id, 'speakers'],
     icon: 'speaker',
@@ -71,11 +76,6 @@ export const menuItems = (id) => ([
     label: 'Sponsors',
     link: ['/conferences', id, 'sponsors'],
     icon: 'card_giftcard',
-  },
-  {
-    label: 'Sessions',
-    link: ['/conferences', id, 'sessions'],
-    icon: 'present_to_all',
   },
   {
     label: 'Images',

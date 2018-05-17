@@ -14,14 +14,17 @@ export class FirebaseCrudService {
   ) {}
 
   private collectionsRef = (path: string): Observable<any[]> => {
-    return this.db.collection<any>(path,
-      ref => {
-        let query : firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
+    return this.db
+      .collection<any>(path, ref => {
+        let query:
+          | firebase.firestore.CollectionReference
+          | firebase.firestore.Query = ref
         if (this.parentId) {
           query = query.where('parentId', '==', this.parentId)
         }
         return query
-      }).valueChanges()
+      })
+      .valueChanges()
   }
 
   private collectionsRelationsRef = (relation: string): Observable<any[]> => {
@@ -44,6 +47,19 @@ export class FirebaseCrudService {
     return this.collectionsRef(collectionId || this.collectionId).map(
       items => items.length,
     )
+  }
+
+  public countRelated(
+    parentCollection: string,
+    parentId: string,
+    relation: string,
+  ): Observable<number> {
+    return this.db
+      .collection(parentCollection)
+      .doc(parentId)
+      .collection(relation)
+      .valueChanges()
+      .pipe(map(items => items.length))
   }
 
   public getItems(collectionId = null): Observable<any[]> {

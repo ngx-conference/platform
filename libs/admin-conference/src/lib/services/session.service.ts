@@ -39,8 +39,8 @@ export class SessionService {
         value: 'presentation',
         label: 'Presentation',
       }, {
-        value: 'sponsor',
-        label: 'Sponsor Session',
+        value: 'sponsor-talk',
+        label: 'Sponsor talk',
       }, {
         value: 'workshop',
         label: 'Workshop',
