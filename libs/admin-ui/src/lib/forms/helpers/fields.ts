@@ -37,6 +37,7 @@ export class Field {
       'description',
       'labelClasses',
       'fieldClasses',
+      'autocomplete',
       'readonly',
       'disabled',
       'required',

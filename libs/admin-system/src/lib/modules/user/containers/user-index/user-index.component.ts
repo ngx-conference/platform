@@ -16,9 +16,9 @@ import { SystemUserService } from '../../services/system-user.service'
     <table mat-table #table [dataSource]="dataSource">
 
       <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef></th>
+        <th mat-header-cell *matHeaderCellDef class="avatar-th"></th>
         <td mat-cell *matCellDef="let user">
-          <ui-avatar [image]="user.avatar"></ui-avatar>
+          <ui-avatar size="sm" [image]="user.avatar"></ui-avatar>
         </td>
       </ng-container>
 
@@ -61,6 +61,16 @@ import { SystemUserService } from '../../services/system-user.service'
     table {
       width: 100%;
     }
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline!important;
+    }
+    .avatar-th {
+      width: 30px;
+    }
     .filter {
       padding: 20px;
       font-size: 14px;
@@ -82,10 +92,7 @@ export class UserIndexComponent {
     public service: SystemUserService,
   ) {
     this.service.crud.getItems()
-      .subscribe(res => {
-        this.dataSource.data = res
-        console.log(res)
-      })
+      .subscribe(res => this.dataSource.data = res)
   }
 
   handleAction({ type, payload }) {
