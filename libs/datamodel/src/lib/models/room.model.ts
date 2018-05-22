@@ -1,9 +1,9 @@
 import { BaseModel } from './base.model'
-import { Event } from './event.model'
-import { Session } from './talk.model'
+import { Conference } from './conference.model'
+import { Session } from './session.model'
 
 export class Room extends BaseModel {
   name: string // Public name : Main Stage, Corridor
-  event: Event // belongsTo event
-  talks?: Session[] // hasMany talks
+  conference: Conference // belongsTo conference
+  sessions?: Session[] // hasMany sessions
 }

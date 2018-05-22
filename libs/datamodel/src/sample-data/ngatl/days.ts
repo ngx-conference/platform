@@ -1,6 +1,6 @@
 import { Day } from '../../lib/models'
 
-import { talksDayFour, talksDayOne, talksDayThree, talksDayTwo } from './talks'
+import { sessionsDayFour, sessionsDayOne, sessionsDayThree, sessionsDayTwo } from './sessions'
 import { event } from './event'
 
 export const dayOne: Day = {
@@ -8,26 +8,26 @@ export const dayOne: Day = {
   name: 'Workshops day 2',
   date: new Date('2018-01-30'),
   event,
-  talks: talksDayOne,
+  sessions: sessionsDayOne,
 }
 export const dayTwo: Day = {
   id: 'ngatl-day-id-2',
   name: 'Workshops day 2',
   date: new Date('2018-01-31'),
   event,
-  talks: talksDayTwo,
+  sessions: sessionsDayTwo,
 }
 export const dayThree: Day = {
   id: 'ngatl-day-id-3',
   name: 'Conference day 1',
   date: new Date('2018-02-01'),
   event,
-  talks: talksDayThree,
+  sessions: sessionsDayThree,
 }
 export const dayFour: Day = {
   id: 'ngatl-day-id-4',
   name: 'Conference day 2',
   date: new Date('2018-02-02'),
   event,
-  talks: talksDayFour,
+  sessions: sessionsDayFour,
 }

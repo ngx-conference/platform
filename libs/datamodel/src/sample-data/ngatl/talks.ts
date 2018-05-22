@@ -3,7 +3,7 @@ import { Session} from '../../lib/models'
 import { roomOne } from './rooms'
 import { dayOne, dayTwo, dayThree, dayFour } from './days'
 
-export const talksDayOne: Session[] = [
+export const sessionsDayOne: Session[] = [
   {
     id: 'z7mnehtjrmy',
     title: 'NativeScript Workshop: Day 1 of 2',
@@ -77,7 +77,7 @@ export const talksDayOne: Session[] = [
   },
 ]
 
-export const talksDayTwo: Session[] = [
+export const sessionsDayTwo: Session[] = [
   {
     id: '9xlx-rbdtx4',
     title: 'Taming Forms in Angular: 1 day',
@@ -131,7 +131,7 @@ export const talksDayTwo: Session[] = [
   },
 ]
 
-export const talksDayThree: Session[] = [
+export const sessionsDayThree: Session[] = [
   {
     id: '5a5fcee829ae9d311110550a',
     title: 'Registration + Breakfast',
@@ -419,7 +419,7 @@ export const talksDayThree: Session[] = [
   },
 ]
 
-export const talksDayFour: Session[] = [
+export const sessionsDayFour: Session[] = [
   {
     id: '5a5fcee829ae9d3111105524',
     title: 'Breakfast',

@@ -3,7 +3,7 @@ import { Event } from '../../lib/models'
 import { dayOne, dayTwo, dayThree, dayFour } from './days'
 import { speakers } from './speakers'
 import { sponsors } from './sponsors'
-import { talksDayOne, talksDayTwo, talksDayThree, talksDayFour } from './talks'
+import { sessionsDayOne, sessionsDayTwo, sessionsDayThree, sessionsDayFour } from './sessions'
 
 export const event: Event = {
   id: 'ng-atl-2018',
@@ -12,5 +12,5 @@ export const event: Event = {
   days: [dayOne, dayTwo, dayThree, dayFour],
   speakers: [...speakers],
   sponsors: [...sponsors],
-  talks: [...talksDayOne, ...talksDayTwo, ...talksDayThree, ...talksDayFour],
+  sessions: [...sessionsDayOne, ...sessionsDayTwo, ...sessionsDayThree, ...sessionsDayFour],
 }

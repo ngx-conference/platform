@@ -1,5 +1,5 @@
 import { BaseModel } from './base.model'
-import { Session } from './talk.model'
+import { Session } from './session.model'
 
 export class Sponsor extends BaseModel {
   name: string
@@ -8,5 +8,5 @@ export class Sponsor extends BaseModel {
   url?: string
   type?: string
   twitter?: string
-  talks?: Session[]
+  sessions?: Session[]
 }

@@ -17,7 +17,7 @@ export const speakers: Speaker[] = [
     avatarUrl:
       'https://daks2k3a4ib2z.cloudfront.net/59f85d8ca38c420001ebea6f/59fc66d822019c0001c195cd_Alyssa.jpg',
     description:
-      "I'm an Angular Developer Advocate for Kendo UI & GDE. I’ve spoken at over 20 conferences Internationally, specializing in motivational soft talks. I'm a weekly panelist on Adventures in Angular and Angular Air, which have a combined following of over 16,000 listeners. I enjoy gaming, scuba diving, and have a toothless dog named Gummy. My DM is always open, come talk sometime.",
+      "I'm an Angular Developer Advocate for Kendo UI & GDE. I’ve spoken at over 20 conferences Internationally, specializing in motivational soft sessions. I'm a weekly panelist on Adventures in Angular and Angular Air, which have a combined following of over 16,000 listeners. I enjoy gaming, scuba diving, and have a toothless dog named Gummy. My DM is always open, come session sometime.",
     twitter: 'https://twitter.com/AlyssaNicoll',
   },
   {
@@ -124,7 +124,7 @@ export const speakers: Speaker[] = [
     avatarUrl:
       'https://daks2k3a4ib2z.cloudfront.net/59f85d8ca38c420001ebea6f/59fc711022019c0001c19768_erica_stanley.jpg',
     description:
-      'Erica Stanley is an engineering manager at SalesLoft – where she’s helping grow the product engineering team for one the Southeast’s fastest growing SaaS companies. She holds a B.S and M.S in Computer Science from Clark Atlanta University and conducted post-graduate research at the University of North Carolina at Chapel Hill. Always eager to explore and push boundaries in tech, Erica has worked in various areas of technology, including web, mobile, augmented and virtual reality, artificial intelligence and human-centered computing. Erica is active in the Atlanta technology community. She helps develop and teach youth coding programs, speaks at local hackathons, conferences, and user groups. She also founded the Atlanta network of Women Who Code, where she leads new developer workshops and organizes monthly tech talks, hack nights, and networking events for women technologists.',
+      'Erica Stanley is an engineering manager at SalesLoft – where she’s helping grow the product engineering team for one the Southeast’s fastest growing SaaS companies. She holds a B.S and M.S in Computer Science from Clark Atlanta University and conducted post-graduate research at the University of North Carolina at Chapel Hill. Always eager to explore and push boundaries in tech, Erica has worked in various areas of technology, including web, mobile, augmented and virtual reality, artificial intelligence and human-centered computing. Erica is active in the Atlanta technology community. She helps develop and teach youth coding programs, speaks at local hackathons, conferences, and user groups. She also founded the Atlanta network of Women Who Code, where she leads new developer workshops and organizes monthly tech sessions, hack nights, and networking events for women technologists.',
     twitter: 'https://twitter.com/ericastanley',
   },
   {
@@ -239,7 +239,7 @@ export const speakers: Speaker[] = [
     avatarUrl:
       'https://daks2k3a4ib2z.cloudfront.net/59f85d8ca38c420001ebea6f/5a12ffc0306e7e0001fa6559_Paulina.jpg',
     description:
-      'Paulina is a kick ass software developer at Webjunto. She is an integral process for the day-to-day beyond building Webjunto’s hybrid mobile and web applications, providing insight to interns and teammates. She is always in the know and up to date on the latest updates in technology and how to apply them to Webjunto’s current projects. She enjoys the challenge of consistently opening her thought process to new avenues in order to productively search for solutions in a different way and implement those ideas. Due to her craving for creativity, hybrid technologies and Angular are not only her only technical obsession; her latest interests are native mobile development, game development, experimenting with a Raspberry Pi. You can catch her a giving talks about her love of technology, acting as an Assistant Organizer of the Ionic Philly Meetup, or working as a TA at Girl Develop It Philly and TechGirlz. When she isn’t coding, she can be found online playing games, playing with her cat Ozzy, or trying new and different types of food.\n',
+      'Paulina is a kick ass software developer at Webjunto. She is an integral process for the day-to-day beyond building Webjunto’s hybrid mobile and web applications, providing insight to interns and teammates. She is always in the know and up to date on the latest updates in technology and how to apply them to Webjunto’s current projects. She enjoys the challenge of consistently opening her thought process to new avenues in order to productively search for solutions in a different way and implement those ideas. Due to her craving for creativity, hybrid technologies and Angular are not only her only technical obsession; her latest interests are native mobile development, game development, experimenting with a Raspberry Pi. You can catch her a giving sessions about her love of technology, acting as an Assistant Organizer of the Ionic Philly Meetup, or working as a TA at Girl Develop It Philly and TechGirlz. When she isn’t coding, she can be found online playing games, playing with her cat Ozzy, or trying new and different types of food.\n',
     twitter: 'https://twitter.com/paulpaultweets',
   },
   {
@@ -248,7 +248,7 @@ export const speakers: Speaker[] = [
     avatarUrl:
       'https://daks2k3a4ib2z.cloudfront.net/59f85d8ca38c420001ebea6f/59fc7445605d4b0001f00231_Rachita.jpg',
     description:
-      'Rachita is a front-end developer with a deep interest in the front end architecture. With each talk, she wants to spread the message of doing it right the first time. She is a firm believer that time put into thinking about the architecture before writing code results in faster and more reliable code over time. From experience, she knows code written fast, but with no consideration for architecture is also buggy. :)',
+      'Rachita is a front-end developer with a deep interest in the front end architecture. With each session, she wants to spread the message of doing it right the first time. She is a firm believer that time put into thinking about the architecture before writing code results in faster and more reliable code over time. From experience, she knows code written fast, but with no consideration for architecture is also buggy. :)',
     twitter: 'https://twitter.com/way2rach',
   },
   {
@@ -297,7 +297,7 @@ export const speakers: Speaker[] = [
     avatarUrl:
       'https://daks2k3a4ib2z.cloudfront.net/59f85d8ca38c420001ebea6f/59fc7949b6086d00014935d6_Scott.jpg',
     description:
-      "Scott is a web developer who has been blogging at https://hanselman.com for over a decade. He works in Open Source on ASP.NET and the Azure Cloud for Microsoft out of his home office in Portland, Oregon. Scott has three podcasts, http://hanselminutes.com for tech talk, http://thisdeveloperslife.com on developers' lives and loves, and http://ratchetandthegeek.com for pop culture and tech media. He's written a number of books and spoken in person to almost a half million developers worldwide.",
+      "Scott is a web developer who has been blogging at https://hanselman.com for over a decade. He works in Open Source on ASP.NET and the Azure Cloud for Microsoft out of his home office in Portland, Oregon. Scott has three podcasts, http://hanselminutes.com for tech session, http://thisdeveloperslife.com on developers' lives and loves, and http://ratchetandthegeek.com for pop culture and tech media. He's written a number of books and spoken in person to almost a half million developers worldwide.",
     twitter: 'https://twitter.com/shanselman',
   },
   {
