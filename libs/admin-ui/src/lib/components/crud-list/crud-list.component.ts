@@ -36,7 +36,7 @@ export class CrudListComponent implements OnInit, OnDestroy {
     const breakpoints : { [ size : string ] : number } ={
         ['xs']: 1,
         ['sm']: 1,
-        ['md']: 2,
+        ['md']: 3,
         ['lg']: 3,
         ['xl']: 3,
       };

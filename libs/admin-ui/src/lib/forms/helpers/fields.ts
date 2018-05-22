@@ -26,7 +26,8 @@ export class Field {
       type: templateType,
     }
 
-    const validators = { validation: options.validators || [] }
+    const validators = options.validators || null
+    const asyncValidators = options.asyncValidators || null
     const validation = options.validation || {}
 
     const toKeys = [
@@ -65,6 +66,7 @@ export class Field {
       type,
       templateOptions,
       validators,
+      asyncValidators,
       validation,
       hideExpression,
       defaultValue,
@@ -134,10 +136,17 @@ export class Field {
     return Field.field('checkbox', 'checkbox', key, options)
   }
 
-  public static array(fields: any[] = [], arrayClassName = ''): any {
+  public static repeat(key, fields: any[] = [], btnText = 'Add', className = ''): any {
     return {
-      fieldArrayClassName: arrayClassName ? arrayClassName : null,
-      fieldArray: fields,
+      key,
+      type: 'repeat',
+      fieldArray: {
+        fieldGroupClassName: className ? className : null,
+        templateOptions: {
+          btnText,
+        },
+        fieldGroup: fields,
+      }
     }
   }
 

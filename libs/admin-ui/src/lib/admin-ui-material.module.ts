@@ -4,6 +4,7 @@ import {
   MatCardModule,
   MatCheckboxModule,
   MatDialogModule,
+  MatFormFieldModule,
   MatGridListModule,
   MatIconModule,
   MatInputModule,
@@ -15,6 +16,7 @@ import {
   MatSortModule,
   MatStepperModule,
   MatTableModule,
+  MatTabsModule,
   MatToolbarModule,
 } from '@angular/material'
 import { LayoutModule } from '@angular/cdk/layout'
@@ -24,6 +26,7 @@ const materialModules = [
   MatCardModule,
   MatCheckboxModule,
   MatDialogModule,
+  MatFormFieldModule,
   MatGridListModule,
   MatIconModule,
   MatInputModule,
@@ -35,6 +38,7 @@ const materialModules = [
   MatSortModule,
   MatStepperModule,
   MatTableModule,
+  MatTabsModule,
   MatToolbarModule,
   LayoutModule,
 ]

@@ -7,6 +7,7 @@ import { FormsModule } from './forms/forms.module'
 import { AdminUiMaterialModule } from './admin-ui-material.module'
 
 import { LayoutComponent } from './containers/layout/layout.component'
+import { TabsLayoutComponent } from './containers/tabs-layout/tabs-layout.component'
 
 import { AvatarComponent } from './components/avatar/avatar.component'
 import { CrudComponent } from './components/crud/crud.component'
@@ -31,6 +32,7 @@ const exportedComponents = [
   LoadingComponent,
   PageComponent,
   PageTitleComponent,
+  TabsLayoutComponent,
   WizardComponent,
 ]
 

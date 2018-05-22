@@ -38,7 +38,6 @@ export class WizardStep {
   templateUrl: './wizard.component.html',
   styleUrls: ['./wizard.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WizardComponent implements OnInit {
   @Input() public wizard: Wizard = new Wizard()
