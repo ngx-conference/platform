@@ -4,7 +4,6 @@ import { ExportImportService } from '../../services/export-import.service'
 @Component({
   selector: 'lib-system-export',
   template: `
-    <ui-page-title title="Export & Import" icon="cloud_upload"></ui-page-title>
     <mat-card>
       <mat-card-content>
         <button mat-raised-button (click)="export()" class="button">

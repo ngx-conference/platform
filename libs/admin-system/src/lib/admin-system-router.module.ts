@@ -1,13 +1,28 @@
 import { ModuleWithProviders } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-
-import { SystemIndexComponent } from './containers/system-index/system-index.component'
+import { TabsLayoutComponent } from '@ngx-conference/admin-ui'
 
 const routes: Routes = [
   { path: '', redirectTo: 'users', pathMatch: 'full' },
   {
     path: '',
-    component: SystemIndexComponent,
+    component: TabsLayoutComponent,
+    data: {
+      title: 'System',
+      icon: 'settings',
+      tabs: [
+        {
+          label: 'Users',
+          link: [ 'users' ],
+          icon: 'people_outline',
+        },
+        {
+          label: 'Export & Import',
+          link: [ 'export-import' ],
+          icon: 'cloud_upload',
+        }
+      ]
+    },
     children: [
       {
         path: 'export-import',

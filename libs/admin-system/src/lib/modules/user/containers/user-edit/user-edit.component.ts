@@ -8,7 +8,6 @@ import { SystemUserService } from '../../services/system-user.service'
 @Component({
   selector: 'system-user-index',
   template: `
-    <ui-page-title title="Users" icon="people_outline"></ui-page-title>
     <mat-card class="form">
       <mat-card-content>
         <ui-loading *ngIf="!user"></ui-loading>

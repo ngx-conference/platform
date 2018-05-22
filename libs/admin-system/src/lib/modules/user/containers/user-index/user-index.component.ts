@@ -7,8 +7,6 @@ import { SystemUserService } from '../../services/system-user.service'
 @Component({
   selector: 'system-users-index',
   template: `
-    <ui-page-title title="Users" icon="people_outline"></ui-page-title>
-
     <mat-form-field class="filter">
       <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
     </mat-form-field>
