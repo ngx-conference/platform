@@ -22,19 +22,19 @@ export class ConferenceHomeComponent implements OnInit {
   public links = [
     {
       label: 'Speakers',
-      link: '/speakers',
+      link: '../speakers',
     },
     {
       label: 'Sessions',
-      link: '/sessions',
+      link: '../sessions',
     },
     {
       label: 'Schedule',
-      link: '/schedule',
+      link: '../schedule',
     },
     {
       label: 'Sponsors',
-      link: '/sponsors',
+      link: '../sponsors',
     },
   ]
   public conference: any
