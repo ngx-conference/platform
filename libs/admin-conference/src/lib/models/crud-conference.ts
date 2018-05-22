@@ -6,20 +6,25 @@ import { CrudSponsor } from './crud-sponsor'
 import { CrudSession } from './crud-session'
 
 export const ConferenceIdFields = [
+  Field.input('name', {
+    label: 'Name',
+    placeholder: 'The name of the conference.',
+    description: 'We recommend adding a year like: Angular Mars 2028',
+    required: true,
+    minLength: 5,
+    maxLength: 50,
+  }),
   Field.input('id', {
-    placeholder: 'ID to be used in the API (auto-generated, static).',
+    label: 'ID',
+    placeholder: 'Auto-generated slug, static',
+    description: 'Used in URL\'s and API\'s, can not be changed',
     required: true,
     disabled: true,
     minLength: 5,
     maxLength: 50,
   }),
-  Field.input('name', {
-    placeholder: 'Enter the name of the conference.',
-    required: true,
-    minLength: 5,
-    maxLength: 50,
-  }),
   Field.input('description', {
+    label: 'Description',
     placeholder: 'Short description, tag line or intro text.',
     minLength: 5,
     maxLength: 250,

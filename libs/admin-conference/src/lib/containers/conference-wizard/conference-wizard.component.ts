@@ -1,31 +1,11 @@
 import { Component } from '@angular/core'
 import { FormGroup } from '@angular/forms'
 
-import { Wizard } from '@ngx-conference/admin-ui'
+import { slugify, Wizard } from '@ngx-conference/admin-ui'
+import { Conference } from '@ngx-conference/datamodel/src/lib/models/conference.model'
 
 import { ConferenceService } from '../../services/conference.service'
-import { Location } from '@angular/common'
 import { Router } from '@angular/router'
-
-const slugify = (str): string => {
-  str = str.replace(/^\s+|\s+$/g, '') // trim
-  str = str.toLowerCase()
-
-  // remove accents, swap ñ for n, etc
-  const from = 'àáãäâèéëêìíïîòóöôùúüûñç·/_,:;'
-  const to = 'aaaaaeeeeiiiioooouuuunc------'
-
-  for (let i = 0, l = from.length; i < l; i++) {
-    str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i))
-  }
-
-  str = str
-    .replace(/[^a-z0-9 -]/g, '') // remove invalid chars
-    .replace(/\s+/g, '-') // collapse whitespace and replace by -
-    .replace(/-+/g, '-') // collapse dashes
-
-  return str
-}
 
 @Component({
   selector: 'lib-conference-wizard',
@@ -42,7 +22,7 @@ const slugify = (str): string => {
 export class ConferenceWizardComponent {
 
   public form = new FormGroup({})
-  public model = {}
+  public model: Conference = new Conference()
   public wizard: Wizard = { steps: [] }
 
   constructor(public service: ConferenceService, private router: Router) {
@@ -62,6 +42,10 @@ export class ConferenceWizardComponent {
   }
 
   modelChange() {
-    this.model = Object.assign({}, this.model, { id: slugify(this.model['name']) })
+    const id = slugify(this.model['name'])
+
+    if (id !== this.model.id) {
+      this.model = Object.assign({}, this.model, { id: id })
+    }
   }
 }

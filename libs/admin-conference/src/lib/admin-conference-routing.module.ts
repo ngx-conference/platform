@@ -1,7 +1,7 @@
 import { ModuleWithProviders } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 
-import { CrudComponent } from '@ngx-conference/admin-ui'
+import { CrudComponent, TabsLayoutComponent } from '@ngx-conference/admin-ui'
 
 import { ConferenceResolver } from './resolver/conference.resolver'
 import { DbResolver } from './resolver/db.resolver'
@@ -9,7 +9,9 @@ import { DbResolver } from './resolver/db.resolver'
 import { ConferenceDashboardComponent } from './containers/conference-dashboard/conference-dashboard.component'
 import { ConferenceImagesComponent } from './containers/conference-images/conference-images.component'
 import { ConferenceIndexComponent } from './containers/conference-index/conference-index.component'
-import { ConferenceSettingsComponent } from './containers/conference-settings/conference-settings.component'
+import { ConferenceSettingsDatesComponent } from './containers/conference-settings-dates/conference-settings-dates.component'
+import { ConferenceSettingsGeneralComponent } from './containers/conference-settings-general/conference-settings-general.component'
+import { ConferenceSettingsUsersComponent } from './containers/conference-settings-users/conference-settings-users.component'
 import { ConferenceViewComponent } from './containers/conference-view/conference-view.component'
 import { ConferenceWizardComponent } from './containers/conference-wizard/conference-wizard.component'
 
@@ -76,7 +78,40 @@ const routes: Routes = [
           },
           {
             path: 'settings',
-            component: ConferenceSettingsComponent,
+            component: TabsLayoutComponent,
+            data: {
+              title: 'Settings',
+              icon: 'settings',
+              tabs: [
+                {
+                  label: 'General',
+                  link: 'general',
+                },
+                {
+                  label: 'Dates',
+                  link: 'dates',
+                },
+                {
+                  label: 'Users',
+                  link: 'users',
+                },
+              ],
+            },
+            children: [
+              { path: '', pathMatch: 'full', redirectTo: 'general' },
+              {
+                path: 'general',
+                component: ConferenceSettingsGeneralComponent,
+              },
+              {
+                path: 'users',
+                component: ConferenceSettingsUsersComponent,
+              },
+              {
+                path: 'dates',
+                component: ConferenceSettingsDatesComponent,
+              },
+            ],
           },
         ],
       },

@@ -12,12 +12,14 @@ import { ImageUploadComponent } from './components/image-upload/image-upload.com
 import { ConferenceDashboardComponent } from './containers/conference-dashboard/conference-dashboard.component'
 import { ConferenceImagesComponent } from './containers/conference-images/conference-images.component'
 import { ConferenceIndexComponent } from './containers/conference-index/conference-index.component'
-import { ConferenceSettingsComponent } from './containers/conference-settings/conference-settings.component'
+import { ConferenceSettingsDatesComponent } from './containers/conference-settings-dates/conference-settings-dates.component'
+import { ConferenceSettingsGeneralComponent } from './containers/conference-settings-general/conference-settings-general.component';
+import { ConferenceSettingsUsersComponent } from './containers/conference-settings-users/conference-settings-users.component'
 import { ConferenceViewComponent } from './containers/conference-view/conference-view.component'
 import { ConferenceWizardComponent } from './containers/conference-wizard/conference-wizard.component'
 
 import { ImageDropDirective } from './directives/image-drop.directive';
-import { FileSizePipe } from './pipes/file-size.pipe'
+import { FileSizePipe } from './pipes/file-size.pipe';
 
 @NgModule({
   imports: [
@@ -27,7 +29,9 @@ import { FileSizePipe } from './pipes/file-size.pipe'
   declarations: [
     ConferenceDashboardComponent,
     ConferenceIndexComponent,
-    ConferenceSettingsComponent,
+    ConferenceSettingsDatesComponent,
+    ConferenceSettingsGeneralComponent,
+    ConferenceSettingsUsersComponent,
     ConferenceViewComponent,
     ConferenceWizardComponent,
     IconSpeakerComponent,

@@ -9,6 +9,13 @@ export const CrudSpeaker = {
   iconComponent: IconSpeakerComponent,
   title: 'Speakers',
   fields: [
+    Field.input('id', {
+      placeholder: 'ID to be used in the API (auto-generated, static).',
+      required: true,
+      disabled: true,
+      minLength: 5,
+      maxLength: 50,
+    }),
     Field.input('name', {
       placeholder: 'Name',
       required: true,

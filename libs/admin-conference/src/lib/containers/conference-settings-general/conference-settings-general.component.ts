@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms'
 import { ActivatedRoute } from '@angular/router'
-import { ConferenceService } from '@ngx-conference/admin-conference/src/lib/services/conference.service'
 import { CrudConference } from '../../models/crud-conference'
+import { ConferenceService } from '../../services/conference.service'
 
 @Component({
-  selector: 'lib-conference-settings',
+  selector: 'lib-conference-settings-general',
   template: `
-    <ui-page-title title="Settings" icon="settings"></ui-page-title>
     <mat-card class="form">
       <mat-card-content>
         <ui-form [form]="form" [fields]="crud.fields" [model]="conference"></ui-form>
-
         <button mat-raised-button (click)="save()" class="button">
           <mat-icon>save</mat-icon>
           Save
@@ -28,7 +26,7 @@ import { CrudConference } from '../../models/crud-conference'
     }
   `]
 })
-export class ConferenceSettingsComponent implements OnInit {
+export class ConferenceSettingsGeneralComponent implements OnInit {
   public form = new FormGroup({})
   public conference = {}
   public crud = CrudConference
@@ -36,9 +34,7 @@ export class ConferenceSettingsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private service: ConferenceService) { }
 
   ngOnInit() {
-    this.route.data.subscribe(
-      data => this.conference = data.conference
-    )
+    this.conference = this.route.snapshot.data['conference']
   }
 
   save() {

@@ -28,7 +28,6 @@ export class ConferenceService {
     this.fb = new FirebaseCrudService(db, CrudConference.collectionId)
 
     this.wizard = new Wizard()
-    this.wizard.debug = true
     this.wizard.steps = this.wizardSteps
   }
 
@@ -41,16 +40,18 @@ export class ConferenceService {
     {
       label: 'Dates',
       fields: [
-        Field.date('date', {
-          placeholder: 'Date',
-          description: 'First day of the conference',
-          defaultValue: formattedDate(),
-        }),
-        Field.number('days', {
-          placeholder: 'Days',
-          description: 'Number of days of the conference',
-          defaultValue: 1,
-        }),
+        Field.repeat('dates', [
+          Field.input('name', {
+            label: 'Display name',
+            required: true,
+            defaultValue: 'Day One',
+          }),
+          Field.date('day', {
+            label: 'Date',
+            required: true,
+            defaultValue: formattedDate(),
+          }),
+        ]),
       ],
     },
     {
