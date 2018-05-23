@@ -1,5 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+//@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 body {
   margin: 0;
 }
+
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$admin-app-primary: mat-palette($mat-blue-gray, 900);
+$admin-app-accent: mat-palette($mat-pink);
+
+$admin-app-theme: mat-light-theme($admin-app-primary, $admin-app-accent);
+
+@include angular-material-theme($admin-app-theme);
