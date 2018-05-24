@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { FlexLayoutModule } from '@angular/flex-layout'
 import { RouterModule } from '@angular/router'
+import { CalendarDayComponent } from '@ngx-conference/admin-ui/src/lib/components/calendar-day/calendar-day.component'
+import { CalendarModule } from 'angular-calendar'
 
 import { FormsModule } from './forms/forms.module'
 import { AdminUiMaterialModule } from './admin-ui-material.module'
@@ -23,6 +25,7 @@ import { WizardComponent } from './components/wizard/wizard.component'
 
 const exportedComponents = [
   AvatarComponent,
+  CalendarDayComponent,
   CrudComponent,
   CrudIconComponent,
   CrudListComponent,
@@ -36,13 +39,9 @@ const exportedComponents = [
   WizardComponent,
 ]
 
-const entryComponents = [
-  CrudModalComponent
-]
+const entryComponents = [CrudModalComponent]
 
-const internalComponents = [
-  HeaderComponent,
-]
+const internalComponents = [HeaderComponent]
 
 const exportedModules = [
   AdminUiMaterialModule,
@@ -50,12 +49,13 @@ const exportedModules = [
   FormsModule,
   RouterModule,
   FlexLayoutModule,
+  CalendarModule,
 ]
 
 @NgModule({
-  imports: [...exportedModules],
+  imports: [...exportedModules, CalendarModule.forRoot()],
   declarations: [...exportedComponents, ...internalComponents],
   exports: [...exportedComponents, ...exportedModules],
-  entryComponents: [...entryComponents]
+  entryComponents: [...entryComponents],
 })
 export class AdminUiModule {}

@@ -1,6 +1,7 @@
 export * from './lib/forms/helpers/buttons'
 export * from './lib/forms/helpers/fields'
 export * from './lib/helpers'
+export * from './lib/components/calendar-day/calendar-day.component'
 export * from './lib/components/crud/crud.component'
 export * from './lib/components/wizard/wizard.component'
 export * from './lib/containers/layout/layout.component'

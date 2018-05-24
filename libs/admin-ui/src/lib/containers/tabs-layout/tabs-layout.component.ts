@@ -29,13 +29,13 @@ export class Tab {
 })
 export class TabsLayoutComponent implements OnInit {
   @Input() public icon: string
-  @Input() public tabs: Tab[] = []
+  @Input() public tabs: Tab[]
   @Input() public title: string
 
   constructor(public route: ActivatedRoute) {}
   ngOnInit() {
-    this.icon = this.route.snapshot.data.icon
-    this.tabs = this.route.snapshot.data.tabs
-    this.title = this.route.snapshot.data.title
+    this.icon = this.icon || this.route.snapshot.data.icon
+    this.tabs = this.tabs || this.route.snapshot.data.tabs
+    this.title = this.title || this.route.snapshot.data.title
   }
 }

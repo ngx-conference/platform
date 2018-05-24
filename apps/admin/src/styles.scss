@@ -5,6 +5,7 @@ body {
 }
 
 @import '~@angular/material/theming';
+@import "~angular-calendar/css/angular-calendar.css";
 
 @include mat-core();
 
@@ -14,3 +15,10 @@ $admin-app-accent: mat-palette($mat-pink);
 $admin-app-theme: mat-light-theme($admin-app-primary, $admin-app-accent);
 
 @include angular-material-theme($admin-app-theme);
+
+
+.cal-day-view {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
