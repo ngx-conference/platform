@@ -10,6 +10,8 @@ export class Session extends BaseModel {
   day: Day // belongsTo Day
   start: number // 1400
   end: number // 1600
+  room?: string
+  date?: string
   duration?: number // Duration in minutes
   description?: string
   event?: Conference // belongsTo Conference

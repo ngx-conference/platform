@@ -1,6 +1,7 @@
 import { BaseModel } from './base.model'
 
 import { Day } from './day.model'
+import { Room } from './room.model'
 import { Speaker } from './speaker.model'
 import { Sponsor } from './sponsor.model'
 import { Session } from './session.model'
@@ -11,5 +12,6 @@ export class Conference extends BaseModel {
   speakers?: Speaker[] // hasMany Speakers
   sponsors?: Sponsor[] // hasMany Sponsors
   sessions?: Session[] // hasMany Sponsors
-  days?: Day[] // hasMany Sponsors
+  dates?: Day[] // hasMany Sponsors
+  rooms?: Room[] // hasMany Sponsors
 }
