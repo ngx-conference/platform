@@ -42,6 +42,7 @@ export class ConferenceSettingsDatesComponent implements OnInit {
 
   setFields() {
     this.fields = [
+      Field.template('<h4>Conference Dates</h4>'),
       Field.repeat('dates', [
         Field.input('name', {
           label: 'Display name',
@@ -49,6 +50,13 @@ export class ConferenceSettingsDatesComponent implements OnInit {
         }),
         Field.date('day', {
           label: 'Date',
+          required: true,
+        }),
+      ]),
+      Field.template('<h4>Conference Rooms</h4>'),
+      Field.repeat('rooms', [
+        Field.input('name', {
+          label: 'Room name',
           required: true,
         }),
       ]),

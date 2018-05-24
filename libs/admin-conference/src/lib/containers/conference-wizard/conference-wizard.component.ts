@@ -3,6 +3,7 @@ import { FormGroup } from '@angular/forms'
 
 import { slugify, Wizard } from '@ngx-conference/admin-ui'
 import { Conference } from '@ngx-conference/datamodel/src/lib/models/conference.model'
+import { parse } from 'date-fns'
 
 import { ConferenceService } from '../../services/conference.service'
 import { Router } from '@angular/router'
@@ -39,6 +40,17 @@ export class ConferenceWizardComponent {
         )
       },
     }
+    this.model.dates = [
+      {
+        name: 'Conference Day 1',
+        date: parse(new Date()),
+      },
+    ]
+    this.model.rooms = [
+      {
+        name: 'Room 1',
+      },
+    ]
   }
 
   modelChange() {

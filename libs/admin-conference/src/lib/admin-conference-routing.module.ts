@@ -1,5 +1,7 @@
 import { ModuleWithProviders } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
+import { ConferenceDayComponent } from '@ngx-conference/admin-conference/src/lib/containers/conference-day/conference-day.component'
+import { ConferenceScheduleComponent } from '@ngx-conference/admin-conference/src/lib/containers/conference-schedule/conference-schedule.component'
 
 import { CrudComponent, TabsLayoutComponent } from '@ngx-conference/admin-ui'
 
@@ -71,6 +73,16 @@ const routes: Routes = [
             data: {
               crud: CrudSession,
             },
+          },
+          {
+            path: 'schedule',
+            component: ConferenceScheduleComponent,
+            children: [
+              {
+                path: ':date',
+                component: ConferenceDayComponent,
+              },
+            ],
           },
           {
             path: 'images',

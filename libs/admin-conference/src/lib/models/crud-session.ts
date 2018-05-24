@@ -37,5 +37,20 @@ export const CrudSession = {
       rows: 3,
       minLength: 5,
     }),
+    Field.input('room', {
+      placeholder: 'Room',
+    }),
+    Field.input('date', {
+      placeholder: 'Date',
+      minLength: 8
+    }),
+    Field.number('start', {
+      placeholder: 'Start time',
+      minLength: 3
+    }),
+    Field.input('end', {
+      placeholder: 'End Time',
+      minLength: 3
+    }),
   ]
 }

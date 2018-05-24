@@ -40,11 +40,11 @@ export class ConferenceService {
     {
       label: 'Dates',
       fields: [
+        Field.template('<h4>Conference Dates</h4>'),
         Field.repeat('dates', [
           Field.input('name', {
             label: 'Display name',
             required: true,
-            defaultValue: 'Day One',
           }),
           Field.date('day', {
             label: 'Date',
@@ -53,6 +53,18 @@ export class ConferenceService {
           }),
         ]),
       ],
+    },
+    {
+      label: 'Rooms',
+      fields: [
+        Field.template('<h4>Conference Rooms</h4>'),
+        Field.repeat('rooms', [
+          Field.input('name', {
+            label: 'Room name',
+            required: true,
+          }),
+        ]),
+      ]
     },
     {
       label: 'Review',

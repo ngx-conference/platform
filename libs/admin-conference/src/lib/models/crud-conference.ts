@@ -68,6 +68,11 @@ export const menuItems = (id) => ([
     icon: 'dashboard',
   },
   {
+    label: 'Schedule',
+    link: ['/conferences', id, 'schedule'],
+    icon: 'calendar_today',
+  },
+  {
     label: 'Sessions',
     link: ['/conferences', id, 'sessions'],
     icon: 'present_to_all',

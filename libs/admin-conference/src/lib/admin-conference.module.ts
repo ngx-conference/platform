@@ -20,6 +20,8 @@ import { ConferenceWizardComponent } from './containers/conference-wizard/confer
 
 import { ImageDropDirective } from './directives/image-drop.directive';
 import { FileSizePipe } from './pipes/file-size.pipe';
+import { ConferenceScheduleComponent } from './containers/conference-schedule/conference-schedule.component';
+import { ConferenceDayComponent } from './containers/conference-day/conference-day.component';
 
 @NgModule({
   imports: [
@@ -41,6 +43,8 @@ import { FileSizePipe } from './pipes/file-size.pipe';
     ImageUploadComponent,
     ImageDropDirective,
     FileSizePipe,
+    ConferenceScheduleComponent,
+    ConferenceDayComponent,
   ],
   entryComponents: [
     IconSpeakerComponent,
